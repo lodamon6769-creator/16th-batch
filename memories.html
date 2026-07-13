@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Student Messages - Teachers Day 2026</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+    scroll-behavior: smooth;
+}
+
+:root{
+    --primary:#0d5460;
+    --primary-light:#176b73;
+    --secondary:#e0a800;
+    --text:#17434b;
+    --text-light:#35565b;
+}
+
+
+body{
+    min-height:100vh;
+    padding:20px 15px 120px;
+    overflow-x:hidden;
+    background: linear-gradient(-45deg, #e70d0de3, #bd1dccda, #cccf0a, #fff3a3);
+    background-size:400% 400%;
+    animation: bg 12s infinite ease;
+    color:var(--text);
+    font-weight: 500;
+}
+
+
+
+@keyframes bg{
+
+0%{background-position:0% 50%;}
+
+50%{background-position:100% 50%;}
+
+100%{background-position:0% 50%;}
+
+}
+
+
+
+
+
+
+
+
+.l1{left:10%;}
+
+.l2{left:30%;animation-delay:2s;}
+
+.l3{left:50%;animation-delay:4s;}
+
+.l4{left:70%;animation-delay:1s;}
+
+
+.header{
+    text-align:center;
+    margin:30px 0 45px;
+    animation: slideDown .8s ease;
+}
+
+@keyframes slideDown{
+    from{
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
+.logo img{
+    width:160px;
+    height:160px;
+    border-radius:50%;
+    background: linear-gradient(135deg, rgba(255,255,255,.95) 0%, rgba(255,255,255,.85) 100%);
+    padding:12px;
+    object-fit:contain;
+    box-shadow: 0 20px 60px rgba(0,0,0,.25), 0 0 40px rgba(224, 85, 85, 0.15), inset 0 1px 1px rgba(255,255,255,0.8);
+    border: 5px solid white;
+    transition: all .5s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.logo img:hover{
+    transform: scale(1.15) rotateZ(5deg);
+    box-shadow: 0 28px 75px rgba(0,0,0,.3), 0 0 50px rgba(224, 85, 85, 0.25), inset 0 1px 1px rgba(255,255,255,0.9);
+}
+
+
+
+h1{
+    margin-top:20px;
+    font-size:40px;
+    color:var(--primary);
+    font-weight: 900;
+    letter-spacing: -0.6px;
+    text-shadow: 0 6px 20px rgba(0,0,0,.12), 0 2px 4px rgba(0,0,0,0.08);
+    line-height: 1.2;
+}
+
+
+
+.subtitle{
+    color:var(--text-light);
+    font-size:16px;
+    font-weight: 500;
+    margin-top: 8px;
+}
+
+
+
+
+
+
+
+
+.messages{
+    width:96%;
+    max-width:1150px;
+    margin:auto;
+    display:grid;
+    grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
+    gap:28px;
+    animation: fadeIn .6s ease .2s both;
+}
+
+@keyframes fadeIn{
+    from{
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
+.card{
+    background: linear-gradient(135deg, rgba(255,255,255,.85) 0%, rgba(255,255,255,.65) 100%);
+    backdrop-filter: blur(20px) saturate(180%);
+    border-radius: 22px;
+    border: 1px solid rgba(255,255,255,.85);
+    padding:28px;
+    text-align:center;
+    box-shadow: 0 15px 40px rgba(0,0,0,.12), inset 0 1px 0 rgba(255,255,255,.7);
+    transition: all .5s cubic-bezier(0.34, 1.56, 0.64, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.card::before{
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -50%;
+    width: 150px;
+    height: 150px;
+    background: radial-gradient(circle, rgba(255,255,255,.4) 0%, transparent 70%);
+    opacity: 0;
+    transition: all .5s ease;
+}
+
+.card:hover::before{
+    opacity: 1;
+    top: -20%;
+    right: -20%;
+}
+
+
+.card:hover{
+    transform: translateY(-14px) scale(1.05);
+    background: white;
+    box-shadow: 0 25px 60px rgba(0,0,0,.15), inset 0 1px 0 rgba(255,255,255,.9);
+}
+
+
+
+.avatar{
+    font-size:56px;
+    margin-bottom: 14px;
+    transition: all .4s cubic-bezier(0.34, 1.56, 0.64, 1);
+    display: inline-block;
+}
+
+.card:hover .avatar{
+    transform: scale(1.3) rotateZ(15deg);
+}
+
+
+h3{
+    color:var(--primary);
+    margin:14px 0 10px;
+    font-size: 22px;
+    font-weight: 800;
+    letter-spacing: -0.2px;
+}
+
+
+
+button{
+    margin-top:20px;
+    padding:16px 32px;
+    border:none;
+    border-radius: 26px;
+    background: linear-gradient(135deg, #2e7d32 0%, #388e3c 50%, #66bb6a 100%);
+    color:white;
+    font-weight:800;
+    cursor:pointer;
+    transition: all .4s cubic-bezier(0.34, 1.56, 0.64, 1);
+    box-shadow: 0 12px 35px rgba(46, 125, 50, .3), inset 0 1px 1px rgba(255,255,255,0.3);
+    font-size: 16px;
+    letter-spacing: 0.3px;
+    position: relative;
+    overflow: hidden;
+}
+
+button::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0) 100%);
+    transition: left .6s ease;
+    border-radius: 26px;
+}
+
+button:hover::before{
+    left: 100%;
+}
+
+button:hover{
+    transform: translateY(-6px);
+    box-shadow: 0 18px 45px rgba(46, 125, 50, .4), inset 0 1px 1px rgba(255,255,255,0.4), 0 0 30px rgba(46, 125, 50, 0.15);
+    background: linear-gradient(135deg, #388e3c 0%, #43a047 50%, #7cb342 100%);
+}
+
+button:active{
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(46, 125, 50, .2), inset 0 1px 1px rgba(255,255,255,0.3);
+}
+
+
+
+
+.message{
+    display:none;
+    margin-top:18px;
+    padding:18px;
+    background: linear-gradient(135deg, rgba(255,248,181,.8) 0%, rgba(255,248,181,.6) 100%);
+    border-radius: 18px;
+    line-height:1.8;
+    color:var(--text-light);
+    animation: fadeIn .4s ease;
+    border: 1px solid rgba(255,248,181,.9);
+    font-weight: 500;
+}
+
+@keyframes fadeIn{
+    from{
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
+
+
+footer{
+    text-align:center;
+    margin:50px 0 20px;
+    color:var(--primary);
+    font-weight:700;
+    font-size: 18px;
+    text-shadow: 0 2px 8px rgba(0,0,0,.08);
+}
+
+
+
+
+
+.bottom-nav{
+    position:fixed;
+    bottom:20px;
+    left:50%;
+    transform:translateX(-50%);
+    width:92%;
+    max-width:360px;
+    display:flex;
+    justify-content:space-around;
+    padding:16px 14px;
+    background: linear-gradient(135deg, rgba(255,255,255,.95) 0%, rgba(255,255,255,.85) 100%);
+    backdrop-filter: blur(25px) saturate(180%);
+    border-radius:50px;
+    border: 1px solid rgba(255,255,255,.9);
+    box-shadow: 0 15px 50px rgba(0,0,0,.15), inset 0 1px 0 rgba(255,255,255,.8);
+    transition: all .3s ease;
+}
+
+.bottom-nav:hover{
+    box-shadow: 0 20px 60px rgba(0,0,0,.18);
+}
+
+
+
+.bottom-nav a{
+    font-size:26px;
+    text-decoration:none;
+    color:var(--primary);
+    transition: all .3s ease;
+    padding: 8px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+.bottom-nav a:hover{
+    transform: translateY(-10px) scale(1.2);
+    color:var(--secondary);
+    background: rgba(224, 168, 0, 0.1);
+}
+
+
+
+
+
+@media(max-width:600px){
+
+h1{
+
+font-size:27px;
+
+}
+
+
+.card{
+
+padding:20px;
+
+}
+
+}
+
+
+</style>
+
+
+</head>
+
+
+<body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="header">
+
+
+<div class="logo">
+
+<img src="2.png" alt="School Logo">
+
+</div>
+
+
+
+<h1>
+
+💌 Student Messages
+
+</h1>
+
+
+<p class="subtitle">
+
+Beautiful words from students for their teachers
+
+</p>
+
+
+</div>
+
+
+
+
+
+
+<div class="messages">
+
+
+
+<div class="card">
+
+
+<div class="avatar">
+
+👨‍🎓
+
+</div>
+
+
+<h3>
+
+Student 1
+
+</h3>
+
+
+
+<button onclick="show(1)">
+
+Read Message
+
+</button>
+
+
+
+<div class="message" id="m1">
+
+
+Thank you for teaching us with kindness and patience.
+
+You are the light that guides our future.
+
+Happy Teachers Day! 🎓
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+<div class="card">
+
+
+<div class="avatar">
+
+👩‍🎓
+
+</div>
+
+
+<h3>
+
+Student 2
+
+</h3>
+
+
+
+<button onclick="show(2)">
+
+Read Message
+
+</button>
+
+
+
+<div class="message" id="m2">
+
+
+Your words inspire us to dream bigger.
+
+Thank you for always believing in us.
+
+We respect you forever ❤️
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+<div class="card">
+
+
+<div class="avatar">
+
+⭐
+
+</div>
+
+
+<h3>
+
+Student 3
+
+</h3>
+
+
+
+<button onclick="show(3)">
+
+Read Message
+
+</button>
+
+
+
+<div class="message" id="m3">
+
+
+A great teacher creates great memories.
+
+Thank you for making our school journey special.
+
+Happy Teachers Day!
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+<div class="card">
+
+
+<div class="avatar">
+
+🎓
+
+</div>
+
+
+<h3>
+
+Student 4
+
+</h3>
+
+
+
+<button onclick="show(4)">
+
+Read Message
+
+</button>
+
+
+
+<div class="message" id="m4">
+
+
+Your dedication and love make every lesson special.
+
+Thank you for being an amazing teacher.
+
+
+</div>
+
+
+</div>
+
+
+
+</div>
+
+
+
+
+
+
+<footer>
+
+
+✨ With Love From All Students ✨
+
+
+</footer>
+
+
+
+
+
+
+<div class="bottom-nav">
+
+
+<a href="index.html">🏠</a>
+
+
+<a href="gallery.html">📸</a>
+
+
+<a href="program.html">🎉</a>
+
+
+<a href="memories.html">💌</a>
+
+
+<a href="teachers.html">👨‍🏫</a>
+
+
+
+</div>
+
+
+
+
+
+
+<script>
+
+
+function show(id){
+
+
+let msg=document.getElementById("m"+id);
+
+
+
+if(msg.style.display==="block"){
+
+
+msg.style.display="none";
+
+
+}
+
+else{
+
+
+msg.style.display="block";
+
+
+}
+
+
+}
+
+
+
+</script>
+
+
+
+
+</body>
+
+</html>
