@@ -4,207 +4,203 @@
 <head>
 
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
 
-<title>Teachers Day 2026</title>
+<title>16th Batch | Teachers' Day 2026</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="preconnect"
+href="https://fonts.googleapis.com">
+
+<link rel="preconnect"
+href="https://fonts.gstatic.com"
+crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
+rel="stylesheet">
 
 <style>
-   
 
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+scroll-behavior:smooth;
+}
+
+:root{
+
+--primary:#0d5460;
+--primary-light:#176b73;
+--secondary:#FFD700;
+--accent:#ff6b6b;
+--text:#17434b;
+--text-light:#35565b;
+
+--glass:
+rgba(255,255,255,.18);
+
+--glass2:
+rgba(255,255,255,.28);
+
+}
 
 ::selection{
 
-background:#e0a800;
-
+background:#FFD700;
 color:white;
 
 }
 
+body{
 
+min-height:100vh;
 
-.card,
-.teacher,
-.notice{
+overflow-x:hidden;
 
-cursor:pointer;
+padding-bottom:120px;
+
+color:var(--text);
+
+background:
+
+linear-gradient(
+-45deg,
+#ff512f,
+#dd2476,
+#24c6dc,
+#f9d423,
+#6a11cb
+);
+
+background-size:500% 500%;
+
+animation:bgMove 18s ease infinite;
 
 }
 
+@keyframes bgMove{
 
-
-.hero{
-
-position:relative;
-
-z-index:2;
-
+0%{
+background-position:0% 50%;
 }
-
-
-
-.logo img{
-
-animation:logoFloat 4s infinite ease-in-out;
-
-}
-
-
-
-@keyframes logoFloat{
 
 50%{
+background-position:100% 50%;
+}
 
-transform:translateY(-10px);
-
+100%{
+background-position:0% 50%;
 }
 
 }
 
+/* ===========================
+   Animated Glow
+=========================== */
 
-
-
-
-
-
-
-.leaf:nth-child(even){
-
-background:#ff8c42;
-
-}
-
-
-
-.leaf:nth-child(odd){
-
-background:#f4c542;
-
-}
-
-
-
-
-
-
-
-
-.glass::before{
+body::before{
 
 content:"";
 
-position:absolute;
+position:fixed;
+
+top:-180px;
+left:-180px;
+
+width:430px;
+height:430px;
+
+border-radius:50%;
+
+background:
+
+radial-gradient(circle,
+rgba(255,255,255,.25),
+transparent 70%);
+
+filter:blur(60px);
+
+animation:glow1 12s infinite alternate;
+
+z-index:-2;
 
 }
 
+body::after{
 
+content:"";
 
-.glass{
+position:fixed;
 
-position:relative;
+right:-180px;
+bottom:-180px;
 
-overflow:hidden;
+width:430px;
+height:430px;
 
-}
+border-radius:50%;
 
+background:
 
+radial-gradient(circle,
+rgba(255,215,0,.28),
+transparent 70%);
 
-.glass:hover{
+filter:blur(65px);
 
-box-shadow:
+animation:glow2 14s infinite alternate;
 
-0 20px 50px rgba(0,0,0,.18);
-
-}
-
-
-
-
-
-
-
-
-@media(max-width:450px){
-
-
-.bottom-nav a{
-
-font-size:22px;
+z-index:-2;
 
 }
 
+@keyframes glow1{
 
-.mode-btn{
+from{
 
-top:15px;
-
-right:15px;
-
-}
-
-
-.music-btn{
-
-right:15px;
+transform:
+translate(0,0);
 
 }
 
+to{
+
+transform:
+translate(120px,80px);
 
 }
 
-
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:'Poppins',sans-serif;
 }
 
-:root{
-    --primary:#0d5460;
-    --primary-light:#176b73;
-    --secondary:#e0a800;
-    --accent:#ff6b6b;
-    --text:#17434b;
-    --text-light:#35565b;
-    --glass:rgba(255,255,255,.65);
-    --glass-dark:rgba(0,0,0,.08);
-    --success:#2ecc71;
-    --gradient1:linear-gradient(-45deg, #4d8cc0, #66e7d2, #5d3280, #20ddbecc);
+@keyframes glow2{
+
+from{
+
+transform:
+translate(0,0);
+
 }
 
+to{
 
-body{
-    min-height:100vh;
-    padding-bottom:100px;
-    overflow-x:hidden;
-    color:var(--text);
-    background: var(--gradient1);
-    background-size:400% 400%;
-    animation:bg 15s ease infinite;
-    transition:.5s;
-    font-weight: 500;
+transform:
+translate(-120px,-90px);
+
 }
 
+}
 
-
-
-
-
-
-
-
+/* ===========================
+ Loader
+=========================== */
 
 .loader{
 
 position:fixed;
 
-top:0;
-left:0;
-
-width:100%;
-height:100%;
+inset:0;
 
 display:flex;
 
@@ -213,49 +209,58 @@ align-items:center;
 
 background:white;
 
-z-index:9999;
+z-index:99999;
 
-animation:hideLoader 2s forwards;
+animation:
+
+hideLoader
+2s forwards;
 
 }
-
 
 .loader span{
 
-font-size:50px;
+font-size:65px;
 
-animation:spin 1s infinite;
+animation:
+
+loaderSpin
+1s infinite;
 
 }
 
-
-@keyframes spin{
+@keyframes loaderSpin{
 
 50%{
-transform:rotate(180deg);
-}
+
+transform:
+rotate(180deg);
 
 }
 
-
+}
 
 @keyframes hideLoader{
 
 0%,80%{
+
 opacity:1;
+
 }
 
 100%{
+
 opacity:0;
+
 visibility:hidden;
-}
 
 }
 
+}
 
-
-
-
+/* ===========================
+ Floating Circles
+=========================== */
 
 .circle{
 
@@ -263,375 +268,364 @@ position:fixed;
 
 border-radius:50%;
 
-background:rgba(255,255,255,.35);
+background:
 
-filter:blur(2px);
+rgba(255,255,255,.18);
 
-animation:float 8s infinite;
+filter:blur(4px);
+
+animation:
+
+floatCircle
+8s ease-in-out infinite;
+
+z-index:-1;
 
 }
-
 
 .c1{
 
 width:180px;
 height:180px;
 
-top:5%;
-left:5%;
+top:6%;
+left:6%;
 
 }
-
 
 .c2{
 
-width:230px;
-height:230px;
+width:240px;
+height:240px;
 
-right:5%;
-bottom:10%;
+bottom:8%;
+right:6%;
+
+animation-delay:2s;
 
 }
 
+@keyframes floatCircle{
 
+0%,100%{
 
-@keyframes float{
+transform:
+translateY(0);
+
+}
 
 50%{
-transform:translateY(-40px);
-}
+
+transform:
+translateY(-35px);
 
 }
 
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+/* ===========================
+ HERO
+=========================== */
 
 .hero{
 
+max-width:1200px;
+
+margin:auto;
+
 text-align:center;
 
-padding:45px 20px 20px;
+padding:
 
-animation:show 1s;
+40px 20px
+50px;
+
+animation:
+
+heroDown
+1s ease;
 
 }
 
-
-
-@keyframes show{
+@keyframes heroDown{
 
 from{
 
 opacity:0;
-transform:translateY(-40px);
+
+transform:
+translateY(-50px);
 
 }
 
 to{
 
 opacity:1;
-transform:translateY(0);
+
+transform:
+translateY(0);
 
 }
 
 }
-
-
 
 .logo{
 
-position:relative;
+display:flex;
 
-display:inline-block;
+justify-content:center;
 
-}
-
-
-.logo::before{
-
-content:"";
-
-position:absolute;
-
-width:150px;
-height:150px;
-
-background:white;
-
-opacity:.5;
-
-filter:blur(30px);
-
-border-radius:50%;
-
-left:50%;
-top:50%;
-
-transform:
-translate(-50%,-50%);
-
-z-index:-1;
+margin-bottom:25px;
 
 }
-
 
 .logo img{
 
-width:160px;
+width:170px;
+height:170px;
 
-height:160px;
-
-border-radius:50%;
+padding:10px;
 
 background:white;
 
-padding:8px;
+border-radius:50%;
 
-object-fit:contain;
+object-fit:cover;
 
-box-shadow: 0 15px 45px rgba(0,0,0,.25), 0 0 60px rgba(224, 168, 0, 0.2);
+border:5px solid white;
 
-transition: all .4s cubic-bezier(0.34, 1.56, 0.64, 1);
+box-shadow:
+
+0 18px 55px rgba(0,0,0,.25),
+
+0 0 35px rgba(255,215,0,.35);
+
+animation:
+
+logoFloat
+5s infinite ease-in-out;
+
+transition:.45s;
 
 }
 
 .logo img:hover{
 
-transform: scale(1.15) rotateY(10deg);
+transform:
 
-box-shadow: 0 20px 60px rgba(0,0,0,.3), 0 0 80px rgba(224, 168, 0, 0.3);
+scale(1.08)
+rotate(5deg);
 
 }
 
+@keyframes logoFloat{
 
+0%,100%{
+
+transform:
+translateY(0);
+
+}
+
+50%{
+
+transform:
+translateY(-12px);
+
+}
+
+}
+
+.batch{
+
+display:inline-block;
+
+padding:
+
+10px 26px;
+
+margin-bottom:20px;
+
+border-radius:40px;
+
+background:
+
+rgba(255,255,255,.18);
+
+backdrop-filter:
+
+blur(20px);
+
+border:
+
+1px solid rgba(255,255,255,.35);
+
+color:white;
+
+font-weight:700;
+
+letter-spacing:2px;
+
+text-transform:uppercase;
+
+}
 
 .hero h1{
-    margin-top:18px;
-    font-size:48px;
-    font-weight:900;
-    color:var(--primary);
-    text-shadow: 0 6px 20px rgba(13, 84, 96, 0.25), 0 2px 4px rgba(0,0,0,0.1);
-    letter-spacing: -0.8px;
-    line-height: 1.1;
-    animation: titlePulse 3s cubic-bezier(0.34, 1.56, 0.64, 1) infinite;
+
+font-size:
+
+clamp(
+2.8rem,
+6vw,
+4.8rem
+);
+
+font-weight:900;
+
+color:white;
+
+text-shadow:
+
+0 6px 25px
+rgba(0,0,0,.25);
+
+margin-bottom:15px;
+
 }
-
-@keyframes titlePulse{
-    0%, 100%{ text-shadow: 0 6px 20px rgba(13, 84, 96, 0.25); }
-    50%{ text-shadow: 0 6px 30px rgba(224, 168, 0, 0.3); }
-}
-
-
 
 .hero p{
-    margin-top:12px;
-    font-size:18px;
-    color: var(--text-light);
-    font-weight: 600;
-    letter-spacing: 0.5px;
-    animation: fadeInDown 1.2s ease-out 0.3s both;
+
+max-width:760px;
+
+margin:auto;
+
+font-size:18px;
+
+line-height:1.9;
+
+color:white;
+
+opacity:.96;
+
 }
 
-@keyframes fadeInDown{
-    from{ opacity: 0; transform: translateY(-20px); }
-    to{ opacity: 1; transform: translateY(0); }
+.divider{
+
+width:130px;
+
+height:5px;
+
+margin:35px auto;
+
+border-radius:50px;
+
+background:
+
+linear-gradient(
+90deg,
+#FFD700,
+white,
+#FFD700);
+
+box-shadow:
+
+0 0 18px
+rgba(255,215,0,.6);
+
 }
-
-
-
-
-
-
+   /* ===========================
+   Glass Section
+=========================== */
 
 .glass{
-    margin:20px;
-    padding:30px;
-    background:var(--glass);
-    backdrop-filter: blur(30px) saturate(180%);
-    border-radius: 28px;
-    border: 1.5px solid rgba(255,255,255,0.9);
-    box-shadow: 0 25px 70px rgba(0,0,0,.14), inset 0 1px 1px rgba(255,255,255,0.8), 0 0 1px rgba(224, 168, 0, 0.1);
-    transition: all .5s cubic-bezier(0.34, 1.56, 0.64, 1);
-    position: relative;
+
+max-width:1200px;
+
+margin:28px auto;
+
+padding:35px;
+
+background:rgba(255,255,255,.18);
+
+backdrop-filter:blur(24px);
+
+border-radius:30px;
+
+border:1px solid rgba(255,255,255,.35);
+
+box-shadow:
+0 20px 60px rgba(0,0,0,.15);
+
+position:relative;
+
+overflow:hidden;
+
+transition:.45s;
+
 }
 
-.glass::after{
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    border-radius: 28px;
-    background: linear-gradient(135deg, rgba(255,255,255,0.2) 0%, transparent 50%);
-    opacity: 0;
-    transition: opacity .4s ease;
-    pointer-events: none;
+.glass::before{
+
+content:"";
+
+position:absolute;
+
+top:-120px;
+right:-120px;
+
+width:220px;
+height:220px;
+
+border-radius:50%;
+
+background:
+radial-gradient(circle,
+rgba(255,255,255,.35),
+transparent 70%);
+
+transition:.45s;
+
 }
 
-.glass:hover::after{
-    opacity: 1;
+.glass:hover::before{
+
+transform:scale(1.35);
+
 }
 
 .glass:hover{
-    transform:translateY(-12px);
-    box-shadow: 0 40px 100px rgba(0,0,0,.18), inset 0 1px 1px rgba(255,255,255,0.9), 0 0 30px rgba(224, 168, 0, 0.15);
-}
 
+transform:translateY(-8px);
 
-
-h2{
-    text-align:center;
-    margin-bottom:30px;
-    color:var(--primary);
-    font-size: 32px;
-    font-weight: 800;
-    letter-spacing: -0.5px;
-    line-height: 1.2;
-    animation: slideInDown .6s cubic-bezier(0.34, 1.56, 0.64, 1);
-}
-
-@keyframes slideInDown{
-    from{ opacity: 0; transform: translateY(-30px); }
-    to{ opacity: 1; transform: translateY(0); }
-}
-
-
-.cards{
-
-display:grid;
-
-grid-template-columns:repeat(2,1fr);
-
-gap:18px;
+box-shadow:
+0 35px 80px rgba(0,0,0,.20);
 
 }
 
+/* ===========================
+ Section Title
+=========================== */
 
+.glass h2{
 
-.card{
-    padding:32px 20px;
-    text-align:center;
-    background: linear-gradient(135deg, rgba(255,255,255,.9) 0%, rgba(255,255,255,.7) 100%);
-    border-radius: 24px;
-    border: 1.5px solid rgba(255,255,255,0.95);
-    color:var(--primary);
-    font-weight:800;
-    font-size:19px;
-    cursor:pointer;
-    text-decoration:none;
-    transition: all .5s cubic-bezier(0.34, 1.56, 0.64, 1);
-    box-shadow: 0 20px 50px rgba(0,0,0,.12), inset 0 1px 1px rgba(255,255,255,0.9), 0 0 1px rgba(224, 168, 0, 0.1);
-    animation:cardShow .8s ease;
-    position: relative;
-    overflow: hidden;
-}
+text-align:center;
 
-.card::before{
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: linear-gradient(45deg, rgba(255,255,255,0.4) 0%, transparent 50%);
-    opacity: 0;
-    transition: opacity .4s ease;
-    border-radius: 24px;
-}
+font-size:34px;
 
-.card:hover::before{
-    opacity: 1;
-}
+font-weight:800;
 
+color:white;
 
+margin-bottom:30px;
 
-@keyframes cardShow{
-
-from{
-
-opacity:0;
-
-transform:translateY(30px);
+text-shadow:
+0 5px 18px rgba(0,0,0,.18);
 
 }
 
-to{
-
-opacity:1;
-
-transform:translateY(0);
-
-}
-
-}
-
-
-
-.card:hover{
-    transform: translateY(-16px) scale(1.08);
-    background: linear-gradient(135deg, white 0%, rgba(255,255,255,0.95) 100%);
-    color:var(--secondary);
-    box-shadow: 0 35px 80px rgba(0,0,0,.18), inset 0 1px 1px rgba(255,255,255,1), 0 0 30px rgba(224, 168, 0, 0.2);
-}
-
-
-
-
-
-
-
-
-.notice{
-    padding: 20px 24px;
-    margin: 16px 0;
-    background: linear-gradient(135deg, rgba(255,255,255,.85) 0%, rgba(255,255,255,.65) 100%);
-    border-radius: 18px;
-    border-left: 5px solid var(--secondary);
-    border: 1.5px solid rgba(255,255,255,0.9);
-    color:var(--text-light);
-    transition: all .35s cubic-bezier(0.34, 1.56, 0.64, 1);
-    backdrop-filter: blur(15px);
-    font-weight: 600;
-    box-shadow: 0 8px 25px rgba(0,0,0,.08), inset 0 1px 0 rgba(255,255,255,0.7);
-    position: relative;
-}
-
-.notice::before{
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 0;
-    bottom: 0;
-    width: 5px;
-    background: linear-gradient(180deg, var(--secondary) 0%, rgba(224,168,0,0.5) 100%);
-    border-radius: 18px 0 0 18px;
-}
-
-.notice:hover{
-    transform: translateX(14px);
-    box-shadow: 0 15px 40px rgba(0,0,0,.12), inset 0 1px 0 rgba(255,255,255,0.8), 0 0 20px rgba(224, 168, 0, 0.15);
-    border-left-color: var(--primary);
-    background: linear-gradient(135deg, rgba(255,255,255,.95) 0%, rgba(255,255,255,.8) 100%);
-}
-
-
-
-
-
-
+/* ===========================
+ Countdown
+=========================== */
 
 .countdown{
 
@@ -639,357 +633,533 @@ display:flex;
 
 justify-content:center;
 
-gap:15px;
+gap:20px;
 
 flex-wrap:wrap;
 
 }
 
-
-
 .time-box{
-    min-width:90px;
-    padding:26px 16px;
-    background: linear-gradient(135deg, rgba(255,255,255,.9) 0%, rgba(255,255,255,.7) 100%);
-    border-radius: 20px;
-    border: 1.5px solid rgba(255,255,255,0.95);
-    text-align:center;
-    font-weight:800;
-    color:var(--primary);
-    box-shadow: 0 15px 40px rgba(0,0,0,.13), inset 0 1px 1px rgba(255,255,255,0.8), 0 0 1px rgba(224, 168, 0, 0.1);
-    transition: all .4s cubic-bezier(0.34, 1.56, 0.64, 1);
-    position: relative;
-    overflow: hidden;
-}
 
-.time-box::after{
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: linear-gradient(45deg, rgba(255,255,255,0.3) 0%, transparent 50%);
-    opacity: 0;
-    transition: opacity .4s ease;
-    border-radius: 20px;
-}
+width:120px;
 
-.time-box:hover::after{
-    opacity: 1;
+padding:28px 15px;
+
+border-radius:22px;
+
+background:rgba(255,255,255,.18);
+
+backdrop-filter:blur(20px);
+
+border:1px solid rgba(255,255,255,.35);
+
+text-align:center;
+
+color:white;
+
+font-weight:700;
+
+transition:.4s;
+
 }
 
 .time-box:hover{
-    transform: translateY(-8px) scale(1.05);
-    box-shadow: 0 22px 55px rgba(0,0,0,.16), inset 0 1px 1px rgba(255,255,255,0.9), 0 0 25px rgba(224, 168, 0, 0.2);
+
+transform:
+translateY(-8px)
+scale(1.05);
+
+background:
+rgba(255,255,255,.26);
+
 }
-
-
 
 .time-box span{
-    display:block;
-    font-size:36px;
-    color:var(--secondary);
-    font-weight: 900;
-    line-height: 1;
-    letter-spacing: -0.5px;
-    animation: pulse 1s ease-in-out infinite;
+
+display:block;
+
+font-size:42px;
+
+font-weight:900;
+
+margin-bottom:8px;
+
+color:#FFD700;
+
+text-shadow:
+0 0 18px rgba(255,215,0,.5);
+
 }
 
-@keyframes pulse{
-    0%, 100%{ transform: scale(1); }
-    50%{ transform: scale(1.08); }
+/* ===========================
+ Notices
+=========================== */
+
+.notice{
+
+padding:22px 24px;
+
+margin:18px 0;
+
+border-radius:18px;
+
+background:rgba(255,255,255,.16);
+
+border-left:5px solid #FFD700;
+
+color:white;
+
+font-size:17px;
+
+font-weight:600;
+
+backdrop-filter:blur(15px);
+
+transition:.35s;
+
 }
 
+.notice:hover{
 
+transform:translateX(12px);
 
+background:
+rgba(255,255,255,.25);
 
+}
 
+/* ===========================
+ Explore Cards
+=========================== */
 
+.cards{
 
+display:grid;
+
+grid-template-columns:
+repeat(auto-fit,minmax(220px,1fr));
+
+gap:22px;
+
+}
+
+.card{
+
+padding:32px 18px;
+
+border-radius:24px;
+
+text-align:center;
+
+text-decoration:none;
+
+font-size:22px;
+
+font-weight:800;
+
+background:rgba(255,255,255,.20);
+
+color:white;
+
+backdrop-filter:blur(18px);
+
+border:1px solid rgba(255,255,255,.35);
+
+transition:.45s;
+
+box-shadow:
+0 15px 40px rgba(0,0,0,.15);
+
+}
+
+.card:hover{
+
+transform:
+translateY(-12px)
+scale(1.05);
+
+background:white;
+
+color:#0d5460;
+
+box-shadow:
+0 30px 70px rgba(0,0,0,.20);
+
+}
+
+.card span{
+
+display:block;
+
+font-size:55px;
+
+margin-bottom:15px;
+
+}
+   /* ===========================
+   Teacher Preview
+=========================== */
 
 .teacher-row{
 
 display:flex;
 
-gap:15px;
+gap:22px;
 
 overflow-x:auto;
 
-padding-bottom:10px;
+padding:10px 5px 18px;
+
+scroll-behavior:smooth;
 
 }
 
+.teacher-row::-webkit-scrollbar{
 
+height:8px;
+
+}
+
+.teacher-row::-webkit-scrollbar-thumb{
+
+background:#FFD700;
+
+border-radius:20px;
+
+}
 
 .teacher{
-    min-width:160px;
-    padding:28px 16px;
-    text-align:center;
-    background: linear-gradient(135deg, rgba(255,255,255,.85) 0%, rgba(255,255,255,.65) 100%);
-    border-radius: 22px;
-    border: 1.5px solid rgba(255,255,255,0.9);
-    color:var(--primary);
-    font-weight:700;
-    transition: all .45s cubic-bezier(0.34, 1.56, 0.64, 1);
-    box-shadow: 0 15px 40px rgba(0,0,0,.11), inset 0 1px 1px rgba(255,255,255,0.7), 0 0 1px rgba(224, 168, 0, 0.08);
-    position: relative;
-    overflow: hidden;
-}
 
-.teacher::before{
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: linear-gradient(45deg, rgba(255,255,255,0.3) 0%, transparent 50%);
-    opacity: 0;
-    transition: opacity .4s ease;
-    border-radius: 22px;
-    pointer-events: none;
-}
+min-width:180px;
 
-.teacher:hover::before{
-    opacity: 1;
+padding:24px 18px;
+
+text-align:center;
+
+border-radius:24px;
+
+background:rgba(255,255,255,.20);
+
+backdrop-filter:blur(20px);
+
+border:1px solid rgba(255,255,255,.35);
+
+color:white;
+
+transition:.45s;
+
+box-shadow:
+
+0 15px 40px rgba(0,0,0,.16);
+
 }
 
 .teacher:hover{
-    transform: translateY(-14px) scale(1.06);
-    background: linear-gradient(135deg, white 0%, rgba(255,255,255,0.95) 100%);
-    box-shadow: 0 25px 60px rgba(0,0,0,.15), inset 0 1px 1px rgba(255,255,255,0.9), 0 0 25px rgba(224, 168, 0, 0.15);
+
+transform:
+
+translateY(-12px)
+scale(1.05);
+
+background:white;
+
+color:#0d5460;
+
 }
-
-
 
 .teacher img{
-    width:80px;
-    height:80px;
-    border-radius:50%;
-    object-fit:cover;
-    border: 4px solid white;
-    box-shadow: 0 8px 25px rgba(0,0,0,.18), 0 0 15px rgba(224, 168, 0, 0.1);
-    transition: all .4s cubic-bezier(0.34, 1.56, 0.64, 1);
-    margin-bottom: 8px;
-}
 
-.teacher:hover img{
-    transform: scale(1.15) rotate(8deg);
-    border-color: var(--secondary);
-    box-shadow: 0 12px 35px rgba(0,0,0,.22), 0 0 25px rgba(224, 168, 0, 0.25);
-}
-
-
-
-
-
-
-
-
-.mode-btn{
-
-position:fixed;
-
-top:20px;
-
-right:20px;
-
-width:48px;
-
-height:48px;
-
-border:none;
+width:90px;
+height:90px;
 
 border-radius:50%;
 
-cursor:pointer;
+object-fit:cover;
 
-font-size:24px;
+border:4px solid white;
 
-background: linear-gradient(135deg, white 0%, rgba(255,255,255,0.95) 100%);
+margin-bottom:12px;
 
-box-shadow: 0 10px 30px rgba(0,0,0,.18), inset 0 1px 1px rgba(255,255,255,0.9), 0 0 1px rgba(224, 168, 0, 0.1);
+box-shadow:
 
-z-index:100;
+0 10px 30px rgba(0,0,0,.25);
 
-transition: all .3s cubic-bezier(0.34, 1.56, 0.64, 1);
-
-}
-
-.mode-btn:hover{
-
-transform: scale(1.1) rotate(20deg);
-
-box-shadow: 0 15px 40px rgba(0,0,0,.22), inset 0 1px 1px rgba(255,255,255,0.95), 0 0 20px rgba(224, 168, 0, 0.2);
+transition:.4s;
 
 }
 
-.mode-btn:active{
+.teacher:hover img{
 
-transform: scale(0.95) rotate(20deg);
+transform:
+
+scale(1.12)
+rotate(5deg);
+
+border-color:#FFD700;
 
 }
 
+.teacher h3{
 
+font-size:18px;
 
+font-weight:800;
 
+margin-bottom:8px;
 
+}
 
+.teacher p{
 
+font-size:14px;
 
+font-weight:600;
+
+opacity:.95;
+
+}
+
+/* ===========================
+ Quote
+=========================== */
+
+.quote{
+
+text-align:center;
+
+font-size:20px;
+
+line-height:1.9;
+
+color:white;
+
+font-weight:600;
+
+max-width:850px;
+
+margin:auto;
+
+}
+
+/* ===========================
+ Footer
+=========================== */
+
+footer{
+
+margin:80px auto 30px;
+
+padding:30px 20px;
+
+text-align:center;
+
+max-width:900px;
+
+color:white;
+
+}
+
+footer h2{
+
+font-size:34px;
+
+font-weight:900;
+
+margin-bottom:18px;
+
+}
+
+footer p{
+
+font-size:17px;
+
+line-height:1.9;
+
+opacity:.96;
+
+}
+
+.footer-divider{
+
+width:130px;
+
+height:5px;
+
+margin:30px auto;
+
+border-radius:50px;
+
+background:
+
+linear-gradient(
+90deg,
+#FFD700,
+white,
+#FFD700);
+
+box-shadow:
+
+0 0 18px rgba(255,215,0,.6);
+
+}
+
+.footer-credit{
+
+font-size:19px;
+
+font-weight:700;
+
+margin-top:20px;
+
+}
+
+/* ===========================
+ Bottom Navigation
+=========================== */
+
+.bottom-nav{
+
+position:fixed;
+
+left:50%;
+
+bottom:18px;
+
+transform:translateX(-50%);
+
+width:min(430px,94%);
+
+height:72px;
+
+display:flex;
+
+justify-content:space-around;
+
+align-items:center;
+
+background:rgba(255,255,255,.20);
+
+backdrop-filter:blur(24px);
+
+border-radius:45px;
+
+border:1px solid rgba(255,255,255,.35);
+
+box-shadow:
+
+0 20px 45px rgba(0,0,0,.18);
+
+z-index:999;
+
+}
+
+.bottom-nav a{
+
+width:56px;
+height:56px;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+font-size:28px;
+
+text-decoration:none;
+
+border-radius:50%;
+
+color:white;
+
+transition:.35s;
+
+}
+
+.bottom-nav a:hover{
+
+background:white;
+
+color:#0d5460;
+
+transform:
+
+translateY(-8px)
+scale(1.12);
+
+}
+
+.bottom-nav a.active{
+
+background:#FFD700;
+
+color:#12363d;
+
+}
+
+/* ===========================
+ Floating Buttons
+=========================== */
+
+.top-btn,
 .music-btn{
 
 position:fixed;
 
-bottom:90px;
-
-right:20px;
-
-width:50px;
-
-height:50px;
-
-border-radius:50%;
+width:55px;
+height:55px;
 
 border:none;
 
-cursor:pointer;
-
-font-size:22px;
+border-radius:50%;
 
 background:white;
 
+font-size:24px;
+
+cursor:pointer;
+
 box-shadow:
-0 8px 20px rgba(0,0,0,.2);
+
+0 10px 25px rgba(0,0,0,.20);
+
+transition:.35s;
+
+z-index:999;
 
 }
-
-
-
-
-
-
-
 
 .top-btn{
 
-position:fixed;
-
-bottom:90px;
-
 left:20px;
 
-width:45px;
-
-height:45px;
-
-border-radius:50%;
-
-border:none;
-
-cursor:pointer;
-
-font-size:22px;
-
-background:white;
+bottom:95px;
 
 display:none;
 
-box-shadow:
-0 8px 20px rgba(0,0,0,.2);
+}
+
+.music-btn{
+
+right:20px;
+
+bottom:95px;
 
 }
 
+.top-btn:hover,
+.music-btn:hover{
 
+transform:
 
-
-
-
-
-footer{
-
-text-align:center;
-
-padding:30px;
-
-color:var(--primary);
-
-font-weight:700;
+scale(1.12)
+rotate(10deg);
 
 }
 
-
-
-
-
-
-
-
-.bottom-nav{
-    position:fixed;
-    bottom:20px;
-    left:50%;
-    transform:translateX(-50%);
-    width:92%;
-    max-width:400px;
-    display:flex;
-    justify-content:space-around;
-    padding:18px 14px;
-    background: linear-gradient(135deg, rgba(255,255,255,.98) 0%, rgba(255,255,255,.92) 100%);
-    backdrop-filter: blur(30px) saturate(180%);
-    border-radius:50px;
-    border: 1.5px solid rgba(255,255,255,0.95);
-    box-shadow: 0 20px 60px rgba(0,0,0,.17), inset 0 1px 1px rgba(255,255,255,0.9), 0 0 1px rgba(224, 168, 0, 0.1);
-    z-index:50;
-    transition: all .4s cubic-bezier(0.34, 1.56, 0.64, 1);
-}
-
-.bottom-nav:hover{
-    box-shadow: 0 28px 80px rgba(0,0,0,.2), inset 0 1px 1px rgba(255,255,255,0.95), 0 0 30px rgba(224, 168, 0, 0.15);
-    transform: translateX(-50%) translateY(-4px);
-}
-
-
-
-.bottom-nav a{
-    font-size:28px;
-    text-decoration:none;
-    color:var(--primary);
-    transition: all .35s cubic-bezier(0.34, 1.56, 0.64, 1);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 10px 12px;
-    border-radius: 14px;
-    position: relative;
-}
-
-.bottom-nav a::before{
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(135deg, rgba(224, 168, 0, 0.15) 0%, transparent 50%);
-    opacity: 0;
-    border-radius: 14px;
-    transition: opacity .3s ease;
-}
-
-.bottom-nav a:hover::before{
-    opacity: 1;
-}
-
-.bottom-nav a:hover{
-    transform: translateY(-12px) scale(1.25);
-    color:var(--secondary);
-    background: rgba(224, 168, 0, 0.12);
-}
-
-
-
-
-
-
+/* ===========================
+ Reveal Animation
+=========================== */
 
 .reveal{
 
@@ -997,10 +1167,9 @@ opacity:0;
 
 transform:translateY(40px);
 
-transition:1s;
+transition:all .8s ease;
 
 }
-
 
 .reveal.active{
 
@@ -1010,15 +1179,111 @@ transform:translateY(0);
 
 }
 
+/* ===========================
+ Responsive
+=========================== */
 
+@media(max-width:992px){
 
+.cards{
 
+grid-template-columns:
 
+repeat(auto-fit,minmax(220px,1fr));
 
+}
 
+.teacher{
 
-@media(max-width:600px){
+min-width:170px;
 
+}
+
+}
+
+@media(max-width:768px){
+
+.hero{
+
+padding:30px 15px 40px;
+
+}
+
+.logo img{
+
+width:130px;
+height:130px;
+
+}
+
+.hero h1{
+
+font-size:2.3rem;
+
+}
+
+.hero p{
+
+font-size:15px;
+
+}
+
+.glass{
+
+padding:24px 18px;
+
+margin:20px 12px;
+
+}
+
+.glass h2{
+
+font-size:26px;
+
+}
+
+.time-box{
+
+width:95px;
+
+padding:20px 10px;
+
+}
+
+.time-box span{
+
+font-size:32px;
+
+}
+
+.teacher{
+
+min-width:150px;
+
+}
+
+.teacher img{
+
+width:75px;
+height:75px;
+
+}
+
+.bottom-nav{
+
+height:65px;
+
+}
+
+.bottom-nav a{
+
+font-size:24px;
+
+}
+
+}
+
+@media(max-width:480px){
 
 .cards{
 
@@ -1026,776 +1291,1139 @@ grid-template-columns:1fr;
 
 }
 
+.teacher-row{
 
+gap:16px;
+
+}
+
+.teacher{
+
+min-width:140px;
+
+}
+
+footer h2{
+
+font-size:26px;
+
+}
+
+footer p{
+
+font-size:15px;
+
+}
 
 .hero h1{
 
-font-size:30px;
+font-size:1.9rem;
 
 }
 
+.batch{
 
+font-size:12px;
 
-.glass{
-
-margin:15px;
-
-padding:20px;
+padding:8px 18px;
 
 }
 
-
-.time-box{
-
-min-width:65px;
-
 }
-
-
-}
-
-
-</style>
-
-</head>
-
-
-<body>
-
+   <!-- ========================= -->
+<!-- Loader -->
+<!-- ========================= -->
 
 <div class="loader">
-<span>🎓</span>
+    <span>🎓</span>
 </div>
 
-<button class="top-btn" onclick="topPage()" id="topBtn">
-⬆️
-</button>
-
-
+<!-- ========================= -->
+<!-- Floating Background -->
+<!-- ========================= -->
 
 <div class="circle c1"></div>
-
 <div class="circle c2"></div>
 
+<!-- ========================= -->
+<!-- Hero Section -->
+<!-- ========================= -->
 
 <section class="hero">
 
+    <div class="logo">
+        <img src="2.png" alt="16th Batch Logo">
+    </div>
 
-<div class="logo">
+    <div class="batch">
+        ✨ 16th Batch • Teachers' Day 2026 ✨
+    </div>
 
-<img src="2.png" alt="Teachers Day Logo">
+    <h1>
+        Welcome to the 16th Batch
+    </h1>
 
-</div>
+    <p>
+        Honoring every teacher who inspired us, guided us,
+        encouraged us, and helped shape our future.
+        This celebration is dedicated to all our respected teachers.
+    </p>
 
-
-<h1>
-Teachers Day 2026
-</h1>
-
-
-<p>
-A Celebration Of Respect, Happiness & Memories
-</p>
-
+    <div class="divider"></div>
 
 </section>
 
-<!-- COUNTDOWN -->
+<!-- ========================= -->
+<!-- Countdown -->
+<!-- ========================= -->
 
 <div class="glass reveal">
 
+    <h2>
+        ⏳ Countdown to Our Celebration
+    </h2>
 
-<h2>
-⏳ Countdown To Teachers Day
-</h2>
+    <div class="countdown">
 
+        <div class="time-box">
+            <span id="days">00</span>
+            Days
+        </div>
 
-<div class="countdown">
+        <div class="time-box">
+            <span id="hours">00</span>
+            Hours
+        </div>
 
+        <div class="time-box">
+            <span id="minutes">00</span>
+            Minutes
+        </div>
 
-<div class="time-box">
-<span id="days">00</span>
-Days
-</div>
+        <div class="time-box">
+            <span id="seconds">00</span>
+            Seconds
+        </div>
 
-
-<div class="time-box">
-<span id="hours">00</span>
-Hours
-</div>
-
-
-<div class="time-box">
-<span id="minutes">00</span>
-Minutes
-</div>
-
-
-<div class="time-box">
-<span id="seconds">00</span>
-Seconds
-</div>
-
+    </div>
 
 </div>
 
-
-</div>
-
-
-
-
-
-
+<!-- ========================= -->
+<!-- Announcements -->
+<!-- ========================= -->
 
 <div class="glass reveal">
 
+    <h2>
+        📢 16th Batch Announcements
+    </h2>
 
-<h2>
-📢 Announcements
-</h2>
+    <div class="notice">
+        🎓 Teachers' Day Program begins at <strong>10:00 AM</strong>.
+    </div>
 
+    <div class="notice">
+        🌸 Welcome Ceremony and Respect Program for all teachers.
+    </div>
 
-<div class="notice">
+    <div class="notice">
+        📸 Group Photography & Memory Session after the program.
+    </div>
 
-🎓 Program begins at 10:00 AM
-
-</div>
-
-
-<div class="notice">
-
-⭐ Special teacher appreciation ceremony
-
-</div>
-
-
-<div class="notice">
-
-📸 Memory photo session after program
+    <div class="notice">
+        🏆 Teacher Appreciation & Certificate Distribution.
+    </div>
 
 </div>
-
-
-<div class="notice">
-
-🏆 Best Teacher Awards Celebration
-
-</div>
-
-
-</div>
-
-
-
-
-
-
-
-
-
+<!-- ========================= -->
+<!-- Explore Section -->
+<!-- ========================= -->
 
 <div class="glass reveal">
 
+    <h2>
+        ✨ Explore the Celebration
+    </h2>
 
-<h2>
-✨ Explore Celebration
-</h2>
+    <div class="cards">
 
+        <!-- Program -->
 
-<div class="cards">
+        <a href="program.html" class="card">
 
+            <span>🎉</span>
 
+            Program
 
-<a href="program.html" class="card">
+        </a>
 
-🎉
+        <!-- Gallery -->
 
-<br>
+        <a href="gallery.html" class="card">
 
-Program
+            <span>📸</span>
 
-</a>
+            Gallery
 
+        </a>
 
+        <!-- Messages -->
 
+        <a href="memories.html" class="card">
 
-<a href="gallery.html" class="card">
+            <span>💌</span>
 
-📸
+            Messages
 
-<br>
+        </a>
 
-Gallery
+        <!-- Teachers -->
 
-</a>
+        <a href="teachers.html" class="card">
 
+            <span>👨‍🏫</span>
 
+            Teachers
 
+        </a>
 
-
-<a href="memories.html" class="card">
-
-💌
-
-<br>
-
-Messages
-
-</a>
-
-
-
-
-
-<a href="teachers.html" class="card">
-
-👨‍🏫
-
-<br>
-
-Teachers
-
-</a>
-
-
+    </div>
 
 </div>
 
-
-</div>
-
-
-
-
-
-
-
-
-
+<!-- ========================= -->
+<!-- Quick Statistics -->
+<!-- ========================= -->
 
 <div class="glass reveal">
 
+    <h2>
+        🌟 Our Celebration
+    </h2>
 
-<h2>
+    <div class="cards">
 
-👩‍🏫 Our Teachers
+        <div class="card">
 
-</h2>
+            <span>👨‍🏫</span>
 
+            <strong style="display:block;font-size:42px;margin:10px 0;">
+                33
+            </strong>
 
+            Teachers
 
-<div class="teacher-row">
+        </div>
 
+        <div class="card">
 
+            <span>🎓</span>
 
-<div class="teacher">
-<div style="font-size:45px;">👑</div>
-<br>
-Mr. Yubaraj Parajuli
-<br>
-Principal
-</div>
+            <strong style="display:block;font-size:42px;margin:10px 0;">
+                16
+            </strong>
 
-<div class="teacher">
-<div style="font-size:45px;">📐</div>
-<br>
-Mr. Pasupati Aryal
-<br>
-Opt. Mathematics
-</div>
+            Batch
 
-<div class="teacher">
-<div style="font-size:45px;">📝</div>
-<br>
-Mr. Kedar Bhandari
-<br>
-Nepali Teacher
-</div>
+        </div>
 
-<div class="teacher">
-<div style="font-size:45px;">🌍</div>
-<br>
-Mr. Lalit Bohara
-<br>
-Social Studies
-</div>
+        <div class="card">
 
-<div class="teacher">
-<div style="font-size:45px;">🔢</div>
-<br>
-Mr. Ujwal Kumar KC
-<br>
-Compulsory Math
-</div>
+            <span>📸</span>
 
-<div class="teacher">
-<div style="font-size:45px;">🌍</div>
-<br>
-Mr. Chotelal Chaudhary
-<br>
-Social Studies
-</div>
+            <strong style="display:block;font-size:42px;margin:10px 0;">
+                60+
+            </strong>
 
-<div class="teacher">
-<div style="font-size:45px;">📖</div>
-<br>
-Mr. Narayan Kafle
-<br>
-English Teacher
-</div>
+            Memories
 
-<div class="teacher">
-<div style="font-size:45px;">🌍</div>
-<br>
-Mr. N. P. Khatiwada
-<br>
-Social Studies
-</div>
+        </div>
 
-<div class="teacher">
-<div style="font-size:45px;">📝</div>
-<br>
-Mrs. Kabita Aryal
-<br>
-Nepali Teacher
-</div>
+        <div class="card">
 
-<div class="teacher">
-<div style="font-size:45px;">💻</div>
-<br>
-Mr. Bikram Pandeya
-<br>
-Computer Science
-</div>
+            <span>❤️</span>
 
-<div class="teacher">
-<div style="font-size:45px;">🔬</div>
-<br>
-Mr. Ravi Singh Rajput
-<br>
-Science Teacher
-</div>
+            <strong style="display:block;font-size:42px;margin:10px 0;">
+                ∞
+            </strong>
 
-<div class="teacher">
-<div style="font-size:45px;">🏃</div>
-<br>
-Mr. S. N. Pentamang
-<br>
-PE Teacher
-</div>
+            Gratitude
 
-<div class="teacher">
-<div style="font-size:45px;">💻</div>
-<br>
-Mr. Binod Sapkota
-<br>
-Computer Science
-</div>
+        </div>
 
-<div class="teacher">
-<div style="font-size:45px;">🔬</div>
-<br>
-Mr. Samir Akhtar
-<br>
-Science Teacher
-</div>
-
-<div class="teacher">
-<div style="font-size:45px;">📝</div>
-<br>
-Mrs. Laxmi Pokhrel
-<br>
-Nepali Teacher
-</div>
-
-<div class="teacher">
-<div style="font-size:45px;">📝</div>
-<br>
-Mrs. Shanta Adhikari
-<br>
-Nepali Teacher
-</div>
-
-<div class="teacher">
-<div style="font-size:45px;">📐</div>
-<br>
-Ms. Kopila Lama
-<br>
-Opt. Mathematics
-</div>
-
-<div class="teacher">
-<div style="font-size:45px;">🔬</div>
-<br>
-Ms. Bhumika Kharel
-<br>
-Science Teacher
-</div>
-
-<div class="teacher">
-<div style="font-size:45px;">📖</div>
-<br>
-Mrs. Shrijana Subedi
-<br>
-English Teacher
-</div>
-
-<div class="teacher">
-<div style="font-size:45px;">🔬</div>
-<br>
-Mrs. Debaki Adhikari
-<br>
-Science Teacher
-</div>
+    </div>
 
 </div>
-
-
-</div>
-
-
-
-
-
-
-
-
-
+<!-- ========================= -->
+<!-- Teacher Preview -->
+<!-- ========================= -->
 
 <div class="glass reveal">
 
+    <h2>
+        👨‍🏫 Meet Our Wonderful Teachers
+    </h2>
 
-<h2>
-💖 Teacher Quote
-</h2>
+    <div class="teacher-row">
 
+        <!-- Principal -->
 
-<p style="text-align:center;font-size:18px;">
+        <div class="teacher">
 
+            <img src="principal.jfif"
+                 alt="Principal">
 
-"A teacher plants the seeds of knowledge that grow forever."
+            <h3>
+                Mr. Yubaraj Parajuli
+            </h3>
 
+            <p>
+                👑 Principal
+            </p>
 
-</p>
+        </div>
 
+        <!-- Vice Principal -->
+
+        <div class="teacher">
+
+            <img src="pa.jfif"
+                 alt="Vice Principal">
+
+            <h3>
+                Mr. Pashupati Aryal
+            </h3>
+
+            <p>
+                📐 Vice Principal
+            </p>
+
+        </div>
+
+        <!-- SSP -->
+
+        <div class="teacher">
+
+            <img src="ssp.jfif"
+                 alt="Camp Commandant">
+
+            <h3>
+                SSP Lekhanath Khanal
+            </h3>
+
+            <p>
+                🏅 Camp Commandant
+            </p>
+
+        </div>
+
+        <!-- Ujwal -->
+
+        <div class="teacher">
+
+            <img src="ujjuwal.jpg"
+                 alt="Ujwal KC">
+
+            <h3>
+                Mr. Ujwal Kumar KC
+            </h3>
+
+            <p>
+                ➗ Mathematics
+            </p>
+
+        </div>
+
+        <!-- Kedar -->
+
+        <div class="teacher">
+
+            <img src="Kedar-Bhandari-scaled.webp"
+                 alt="Kedar Bhandari">
+
+            <h3>
+                Mr. Kedar Bhandari
+            </h3>
+
+            <p>
+                📝 Nepali
+            </p>
+
+        </div>
+
+        <!-- Lalit -->
+
+        <div class="teacher">
+
+            <img src="Lalit-Bohara-scaled.webp"
+                 alt="Lalit Bohara">
+
+            <h3>
+                Mr. Lalit Bohara
+            </h3>
+
+            <p>
+                🌍 Social Studies
+            </p>
+
+        </div>
+
+        <!-- Narayan -->
+
+        <div class="teacher">
+
+            <img src="Narayan-Kafle-scaled.webp"
+                 alt="Narayan Kafle">
+
+            <h3>
+                Mr. Narayan Kafle
+            </h3>
+
+            <p>
+                📖 English
+            </p>
+
+        </div>
+
+        <!-- Kabita -->
+
+        <div class="teacher">
+
+            <img src="Kabita-Aryal.webp"
+                 alt="Kabita Aryal">
+
+            <h3>
+                Mrs. Kabita Aryal
+            </h3>
+
+            <p>
+                📝 Nepali
+            </p>
+
+        </div>
+
+        <!-- Bikram -->
+
+        <div class="teacher">
+
+            <img src="Bikram-Pandeya.jpg"
+                 alt="Bikram Pandeya">
+
+            <h3>
+                Mr. Bikram Pandeya
+            </h3>
+
+            <p>
+                💻 Computer
+            </p>
+
+        </div>
+
+        <!-- Ravi -->
+
+        <div class="teacher">
+
+            <img src="Ravi-Singh-scaled.webp"
+                 alt="Ravi Singh">
+
+            <h3>
+                Mr. Ravi Singh Rajput
+            </h3>
+
+            <p>
+                🔬 Mathematics
+            </p>
+
+        </div>
+
+    </div>
+
+    <div style="text-align:center;margin-top:35px;">
+
+        <a href="teachers.html"
+           class="card"
+           style="
+           display:inline-block;
+           max-width:300px;
+           text-decoration:none;">
+
+            👨‍🏫<br><br>
+
+            View All 33 Teachers →
+
+        </a>
+
+    </div>
 
 </div>
 
+<!-- ========================= -->
+<!-- Quote -->
+<!-- ========================= -->
 
+<div class="glass reveal">
 
+    <h2>
+        💖 Tribute to Our Teachers
+    </h2>
 
+    <p class="quote">
 
+        "The influence of a great teacher can never be erased.
+
+        Every lesson, every smile, every encouragement,
+        and every word of wisdom has helped shape who we are today.
+
+        Thank you for believing in us.
+
+        Happy Teachers' Day from the 16th Batch. ❤️"
+
+    </p>
+
+</div>
+<!-- ========================= -->
+<!-- Teacher Preview -->
+<!-- ========================= -->
+
+<div class="glass reveal">
+
+    <h2>
+        👨‍🏫 Meet Our Wonderful Teachers
+    </h2>
+
+    <div class="teacher-row">
+
+        <!-- Principal -->
+
+        <div class="teacher">
+
+            <img src="principal.jfif"
+                 alt="Principal">
+
+            <h3>
+                Mr. Yubaraj Parajuli
+            </h3>
+
+            <p>
+                👑 Principal
+            </p>
+
+        </div>
+
+        <!-- Vice Principal -->
+
+        <div class="teacher">
+
+            <img src="pa.jfif"
+                 alt="Vice Principal">
+
+            <h3>
+                Mr. Pashupati Aryal
+            </h3>
+
+            <p>
+                📐 Vice Principal
+            </p>
+
+        </div>
+
+        <!-- SSP -->
+
+        <div class="teacher">
+
+            <img src="ssp.jfif"
+                 alt="Camp Commandant">
+
+            <h3>
+                SSP Lekhanath Khanal
+            </h3>
+
+            <p>
+                🏅 Camp Commandant
+            </p>
+
+        </div>
+
+        <!-- Ujwal -->
+
+        <div class="teacher">
+
+            <img src="ujjuwal.jpg"
+                 alt="Ujwal KC">
+
+            <h3>
+                Mr. Ujwal Kumar KC
+            </h3>
+
+            <p>
+                ➗ Mathematics
+            </p>
+
+        </div>
+
+        <!-- Kedar -->
+
+        <div class="teacher">
+
+            <img src="Kedar-Bhandari-scaled.webp"
+                 alt="Kedar Bhandari">
+
+            <h3>
+                Mr. Kedar Bhandari
+            </h3>
+
+            <p>
+                📝 Nepali
+            </p>
+
+        </div>
+
+        <!-- Lalit -->
+
+        <div class="teacher">
+
+            <img src="Lalit-Bohara-scaled.webp"
+                 alt="Lalit Bohara">
+
+            <h3>
+                Mr. Lalit Bohara
+            </h3>
+
+            <p>
+                🌍 Social Studies
+            </p>
+
+        </div>
+
+        <!-- Narayan -->
+
+        <div class="teacher">
+
+            <img src="Narayan-Kafle-scaled.webp"
+                 alt="Narayan Kafle">
+
+            <h3>
+                Mr. Narayan Kafle
+            </h3>
+
+            <p>
+                📖 English
+            </p>
+
+        </div>
+
+        <!-- Kabita -->
+
+        <div class="teacher">
+
+            <img src="Kabita-Aryal.webp"
+                 alt="Kabita Aryal">
+
+            <h3>
+                Mrs. Kabita Aryal
+            </h3>
+
+            <p>
+                📝 Nepali
+            </p>
+
+        </div>
+
+        <!-- Bikram -->
+
+        <div class="teacher">
+
+            <img src="Bikram-Pandeya.jpg"
+                 alt="Bikram Pandeya">
+
+            <h3>
+                Mr. Bikram Pandeya
+            </h3>
+
+            <p>
+                💻 Computer
+            </p>
+
+        </div>
+
+        <!-- Ravi -->
+
+        <div class="teacher">
+
+            <img src="Ravi-Singh-scaled.webp"
+                 alt="Ravi Singh">
+
+            <h3>
+                Mr. Ravi Singh Rajput
+            </h3>
+
+            <p>
+                🔬 Mathematics
+            </p>
+
+        </div>
+
+    </div>
+
+    <div style="text-align:center;margin-top:35px;">
+
+        <a href="teachers.html"
+           class="card"
+           style="
+           display:inline-block;
+           max-width:300px;
+           text-decoration:none;">
+
+            👨‍🏫<br><br>
+
+            View All 33 Teachers →
+
+        </a>
+
+    </div>
+
+</div>
+
+<!-- ========================= -->
+<!-- Quote -->
+<!-- ========================= -->
+
+<div class="glass reveal">
+
+    <h2>
+        💖 Tribute to Our Teachers
+    </h2>
+
+    <p class="quote">
+
+        "The influence of a great teacher can never be erased.
+
+        Every lesson, every smile, every encouragement,
+        and every word of wisdom has helped shape who we are today.
+
+        Thank you for believing in us.
+
+        Happy Teachers' Day from the 16th Batch. ❤️"
+
+    </p>
+
+</div>
+<!-- ========================= -->
+<!-- TEACHER PREVIEW -->
+<!-- ========================= -->
+
+<div class="glass reveal">
+
+    <h2>
+        👨‍🏫 Meet Our Teachers
+    </h2>
+
+    <p class="section-text">
+        Behind every achievement is a teacher who believed in us.
+        Here are some of the amazing educators who guided the 16th Batch.
+    </p>
+
+    <div class="teacher-row">
+
+        <!-- Teacher 1 -->
+        <div class="teacher">
+            <img src="principal.jfif" alt="Mr. Yubaraj Parajuli">
+            <h3>Mr. Yubaraj Parajuli</h3>
+            <span>Principal</span>
+        </div>
+
+        <!-- Teacher 2 -->
+        <div class="teacher">
+            <img src="pa.jfif" alt="Mr. Pashupati Aryal">
+            <h3>Mr. Pashupati Aryal</h3>
+            <span>Vice Principal</span>
+        </div>
+
+        <!-- Teacher 3 -->
+        <div class="teacher">
+            <img src="Kedar-Bhandari-scaled.webp" alt="Mr. Kedar Bhandari">
+            <h3>Mr. Kedar Bhandari</h3>
+            <span>Nepali Teacher</span>
+        </div>
+
+        <!-- Teacher 4 -->
+        <div class="teacher">
+            <img src="Lalit-Bohara-scaled.webp" alt="Mr. Lalit Bohara">
+            <h3>Mr. Lalit Bohara</h3>
+            <span>Social Studies</span>
+        </div>
+
+        <!-- Teacher 5 -->
+        <div class="teacher">
+            <img src="ujjuwal.jpg" alt="Mr. Ujwal Kumar KC">
+            <h3>Mr. Ujwal Kumar KC</h3>
+            <span>Mathematics</span>
+        </div>
+
+        <!-- Teacher 6 -->
+        <div class="teacher">
+            <img src="Narayan-Kafle-scaled.webp" alt="Mr. Narayan Kafle">
+            <h3>Mr. Narayan Kafle</h3>
+            <span>English</span>
+        </div>
+
+        <!-- Teacher 7 -->
+        <div class="teacher">
+            <img src="Kabita-Aryal.webp" alt="Mrs. Kabita Aryal">
+            <h3>Mrs. Kabita Aryal</h3>
+            <span>Nepali</span>
+        </div>
+
+        <!-- Teacher 8 -->
+        <div class="teacher">
+            <img src="Bikram-Pandeya.jpg" alt="Mr. Bikram Pandeya">
+            <h3>Mr. Bikram Pandeya</h3>
+            <span>Computer Science</span>
+        </div>
+
+        <!-- Teacher 9 -->
+        <div class="teacher">
+            <img src="eco.jpg" alt="Mr. Madanraj Naunyal">
+            <h3>Mr. Madanraj Naunyal</h3>
+            <span>Economics</span>
+        </div>
+
+        <!-- Teacher 10 -->
+        <div class="teacher">
+            <img src="Shrijana-Subedi.webp" alt="Mrs. Shrijana Sharma Subedi">
+            <h3>Mrs. Shrijana Sharma Subedi</h3>
+            <span>English</span>
+        </div>
+
+    </div>
+
+    <div style="text-align:center;margin-top:30px;">
+
+        <a href="teachers.html" class="card"
+           style="display:inline-block;max-width:320px;text-decoration:none;">
+            👨‍🏫<br>
+            View All 33 Teachers
+        </a>
+
+    </div>
+
+</div>
+<!-- ========================= -->
+<!-- Teacher Quote -->
+<!-- ========================= -->
+
+<div class="glass reveal">
+
+    <h2>💖 Teacher Quote</h2>
+
+    <p style="text-align:center;font-size:20px;line-height:1.9;color:var(--text-light);max-width:850px;margin:auto;">
+
+        <strong>
+            "A great teacher doesn't simply teach lessons —
+            they inspire dreams, build confidence,
+            and leave footprints in the hearts of their students forever."
+        </strong>
+
+    </p>
+
+</div>
+
+<!-- ========================= -->
+<!-- Footer -->
+<!-- ========================= -->
 
 <footer>
 
-✨ Made with respect for Teachers Day 2026 ✨
+    <h2 style="margin-bottom:15px;">
+        ✨ Happy Teachers' Day 2026 ✨
+    </h2>
+
+    <p style="max-width:750px;margin:auto;line-height:1.9;">
+
+        Every lesson, every smile, every word of encouragement,
+        and every moment of guidance has shaped who we are today.
+
+        <br><br>
+
+        The memories we created together will always remain
+        one of the brightest chapters of our lives.
+
+    </p>
+
+    <div style="
+        width:140px;
+        height:5px;
+        margin:30px auto;
+        border-radius:30px;
+        background:linear-gradient(90deg,#FFD700,white,#FFD700);
+        box-shadow:0 0 18px rgba(255,215,0,.6);
+    "></div>
+
+    <p style="font-size:20px;font-weight:700;">
+
+        ❤️ With Respect & Gratitude
+
+    </p>
+
+    <h3 style="margin-top:10px;color:var(--secondary);">
+
+        — 16th Batch —
+
+    </h3>
 
 </footer>
 
+<!-- ========================= -->
+<!-- Bottom Navigation -->
+<!-- ========================= -->
 
+<nav class="bottom-nav">
 
+    <a href="index.html" class="active" title="Home">
+        🏠
+    </a>
 
+    <a href="gallery.html" title="Gallery">
+        📸
+    </a>
 
+    <a href="program.html" title="Program">
+        🎉
+    </a>
 
+    <a href="memories.html" title="Messages">
+        💌
+    </a>
 
-<div class="bottom-nav">
+    <a href="teachers.html" title="Teachers">
+        👨‍🏫
+    </a>
 
+</nav>
 
-<a href="index.html">
-
-🏠
-
-</a>
-
-
-
-<a href="gallery.html">
-
-📸
-
-</a>
-
-
-
-<a href="program.html">
-
-🎉
-
-</a>
-
-
-
-<a href="memories.html">
-
-💌
-
-</a>
-
-
-
-<a href="teachers.html">
-
-👨‍🏫
-
-</a>
-
-
-
-</div>
-
-
-
-
-
+<!-- Background Music -->
 
 <audio id="music" loop>
 
-<source src="music.mp3" type="audio/mpeg">
+    <source src="music.mp3" type="audio/mpeg">
 
 </audio>
 
+<!-- Confetti -->
 
 <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.2/dist/confetti.browser.min.js"></script>
 
-
 <script>
 
+/* ===========================
+   Confetti
+=========================== */
 
+window.addEventListener("load",()=>{
 
+    setTimeout(()=>{
 
+        confetti({
 
-window.onload=function(){
+            particleCount:220,
 
+            spread:100,
 
-setTimeout(()=>{
+            origin:{y:.6}
 
+        });
 
-confetti({
-
-particleCount:200,
-
-spread:100,
-
-origin:{
-y:.6
-}
+    },900);
 
 });
 
 
-},800);
+/* ===========================
+   Countdown
+=========================== */
 
+const eventDate=new Date("July 29, 2026 10:00:00").getTime();
 
-};
+setInterval(()=>{
 
+    const now=new Date().getTime();
 
+    const distance=eventDate-now;
 
+    const days=Math.floor(distance/(1000*60*60*24));
 
+    const hours=Math.floor((distance%(1000*60*60*24))/(1000*60*60));
 
-let eventDate = new Date("july 29, 2026 10:00:00").getTime();
+    const minutes=Math.floor((distance%(1000*60*60))/(1000*60));
 
+    const seconds=Math.floor((distance%(1000*60))/1000);
 
-setInterval(function(){
-
-let now = new Date().getTime();
-
-let distance = eventDate - now;
-
-
-let days = Math.floor(
-distance / (1000 * 60 * 60 * 24)
-);
-
-
-let hours = Math.floor(
-(distance % (1000 * 60 * 60 * 24))
-/
-(1000 * 60 * 60)
-);
-
-
-let minutes = Math.floor(
-(distance % (1000 * 60 * 60))
-/
-(1000 * 60)
-);
-
-
-let seconds = Math.floor(
-(distance % (1000 * 60))
-/
-1000
-);
-
-
-document.getElementById("days").innerHTML = days;
-
-document.getElementById("hours").innerHTML = hours;
-
-document.getElementById("minutes").innerHTML = minutes;
-
-document.getElementById("seconds").innerHTML = seconds;
-
+    document.getElementById("days").textContent=days<0?0:days;
+    document.getElementById("hours").textContent=hours<0?0:hours;
+    document.getElementById("minutes").textContent=minutes<0?0:minutes;
+    document.getElementById("seconds").textContent=seconds<0?0:seconds;
 
 },1000);
 
 
+/* ===========================
+   Scroll Reveal
+=========================== */
 
+const reveals=document.querySelectorAll(".reveal");
 
+const revealObserver=new IntersectionObserver((entries)=>{
 
+    entries.forEach(entry=>{
 
+        if(entry.isIntersecting){
 
+            entry.target.classList.add("active");
 
+        }
 
+    });
 
+},{
+    threshold:.15
+});
 
+reveals.forEach(item=>{
 
+    revealObserver.observe(item);
 
+});
 
 
+/* ===========================
+   Card Click Animation
+=========================== */
 
-function reveal(){
+document.querySelectorAll(".card").forEach(card=>{
 
+    card.addEventListener("click",()=>{
 
-let items=document.querySelectorAll(".reveal");
+        card.style.transform="scale(.95)";
 
+        setTimeout(()=>{
 
+            card.style.transform="";
 
-for(let i=0;i<items.length;i++){
+        },180);
 
+    });
 
+});
 
-let windowHeight=window.innerHeight;
 
+/* ===========================
+   Back To Top
+=========================== */
 
-let top=items[i].getBoundingClientRect().top;
+const topBtn=document.getElementById("topBtn");
 
+window.addEventListener("scroll",()=>{
 
-let visible=120;
+    if(window.scrollY>350){
 
+        topBtn.style.display="block";
 
+    }else{
 
-if(top < windowHeight-visible){
+        topBtn.style.display="none";
 
+    }
 
-items[i].classList.add("active");
-
-
-}
-
-
-
-}
-
-
-}
-
-
-
-window.addEventListener(
-"scroll",
-reveal
-);
-
-
-
-reveal();
-
-
-
-
-
-
-
-
-
-
-let topBtn=document.getElementById("topBtn");
-
-
-
-window.onscroll=function(){
-
-
-
-if(document.documentElement.scrollTop>300){
-
-
-topBtn.style.display="block";
-
-
-}
-
-else{
-
-
-topBtn.style.display="none";
-
-
-}
-
-
-
-};
-
-
+});
 
 function topPage(){
 
+    window.scrollTo({
 
-window.scrollTo({
+        top:0,
 
-top:0,
+        behavior:"smooth"
 
-behavior:"smooth"
-
-});
-
+    });
 
 }
 
 
+/* ===========================
+   Floating Sparkles
+=========================== */
 
+function sparkle(){
 
-let cards=document.querySelectorAll(".card");
+    const s=document.createElement("span");
 
+    s.innerHTML="✨";
 
+    s.style.position="fixed";
 
-cards.forEach(card=>{
+    s.style.left=Math.random()*100+"vw";
 
+    s.style.top="100vh";
 
-card.addEventListener(
-"click",
-()=>{
+    s.style.fontSize=(16+Math.random()*16)+"px";
 
+    s.style.pointerEvents="none";
 
-card.style.transform="scale(.95)";
+    s.style.zIndex="999";
 
+    document.body.appendChild(s);
 
-setTimeout(()=>{
+    s.animate([
 
+        {transform:"translateY(0)",opacity:0},
 
-card.style.transform="";
+        {opacity:1},
 
+        {transform:"translateY(-110vh) rotate(360deg)",opacity:0}
 
-},150);
+    ],{
 
+        duration:6500,
 
+        easing:"linear"
+
+    });
+
+    setTimeout(()=>{
+
+        s.remove();
+
+    },6500);
 
 }
 
-);
+setInterval(sparkle,1200);
 
+
+/* ===========================
+   Bottom Navigation Active
+=========================== */
+
+document.querySelectorAll(".bottom-nav a").forEach(link=>{
+
+    link.addEventListener("click",()=>{
+
+        document.querySelectorAll(".bottom-nav a")
+        .forEach(a=>a.classList.remove("active"));
+
+        link.classList.add("active");
+
+    });
 
 });
 
 
-
+console.log("%c16th Batch","font-size:24px;color:#FFD700;font-weight:bold;");
+console.log("%cTeachers' Day 2026","font-size:18px;color:white;");
+console.log("%cDesigned with ❤️ by the 16th Batch","font-size:14px;color:#FFD700;");
 
 </script>
 
-
 </body>
-
 </html>
