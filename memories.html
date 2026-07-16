@@ -4,12 +4,11 @@
 <head>
 
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
-<title>Student Messages - Teachers Day 2026</title>
+<title>16th Batch | Student Messages - Teachers' Day 2026</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
 <style>
 
@@ -18,32 +17,45 @@
     padding:0;
     box-sizing:border-box;
     font-family:'Poppins',sans-serif;
-    scroll-behavior: smooth;
+    scroll-behavior:smooth;
 }
 
 :root{
     --primary:#0d5460;
     --primary-light:#176b73;
     --secondary:#e0a800;
-    --text:#17434b;
-    --text-light:#35565b;
+    --gold:#ffd700;
+    --white:#ffffff;
+    --glass:rgba(255,255,255,.18);
+    --shadow:0 15px 45px rgba(0,0,0,.18);
+    --text:#13363d;
 }
-
 
 body{
+
     min-height:100vh;
-    padding:20px 15px 120px;
+
     overflow-x:hidden;
-    background: linear-gradient(-45deg, #e70d0de3, #bd1dccda, #cccf0a, #fff3a3);
-    background-size:400% 400%;
-    animation: bg 12s infinite ease;
+
     color:var(--text);
-    font-weight: 500;
+
+    background:linear-gradient(
+    -45deg,
+    #ff512f,
+    #dd2476,
+    #f9d423,
+    #24c6dc,
+    #514a9d);
+
+    background-size:400% 400%;
+
+    animation:bgMove 15s ease infinite;
+
+    padding:20px 15px 120px;
+
 }
 
-
-
-@keyframes bg{
+@keyframes bgMove{
 
 0%{background-position:0% 50%;}
 
@@ -53,649 +65,1058 @@ body{
 
 }
 
+body::before{
 
+content:"";
 
+position:fixed;
 
+top:0;
 
+left:0;
 
+width:100%;
 
+height:100%;
 
-.l1{left:10%;}
+background:
 
-.l2{left:30%;animation-delay:2s;}
+radial-gradient(circle at 20% 20%,rgba(255,255,255,.18),transparent 40%),
 
-.l3{left:50%;animation-delay:4s;}
+radial-gradient(circle at 80% 30%,rgba(255,255,255,.12),transparent 35%),
 
-.l4{left:70%;animation-delay:1s;}
+radial-gradient(circle at 40% 90%,rgba(255,255,255,.15),transparent 35%);
 
+pointer-events:none;
+
+z-index:-1;
+
+}
 
 .header{
-    text-align:center;
-    margin:30px 0 45px;
-    animation: slideDown .8s ease;
+
+max-width:1000px;
+
+margin:auto;
+
+text-align:center;
+
+padding:20px 10px 45px;
+
+animation:fadeDown 1s;
+
 }
 
-@keyframes slideDown{
-    from{
-        opacity: 0;
-        transform: translateY(-30px);
-    }
-    to{
-        opacity: 1;
-        transform: translateY(0);
-    }
+@keyframes fadeDown{
+
+from{
+
+opacity:0;
+
+transform:translateY(-40px);
+
 }
 
+to{
 
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
+
+.logo{
+
+display:flex;
+
+justify-content:center;
+
+margin-bottom:20px;
+
+}
 
 .logo img{
-    width:160px;
-    height:160px;
-    border-radius:50%;
-    background: linear-gradient(135deg, rgba(255,255,255,.95) 0%, rgba(255,255,255,.85) 100%);
-    padding:12px;
-    object-fit:contain;
-    box-shadow: 0 20px 60px rgba(0,0,0,.25), 0 0 40px rgba(224, 85, 85, 0.15), inset 0 1px 1px rgba(255,255,255,0.8);
-    border: 5px solid white;
-    transition: all .5s cubic-bezier(0.34, 1.56, 0.64, 1);
+
+width:170px;
+
+height:170px;
+
+border-radius:50%;
+
+padding:10px;
+
+background:white;
+
+object-fit:cover;
+
+border:5px solid rgba(255,255,255,.9);
+
+box-shadow:
+
+0 20px 60px rgba(0,0,0,.25),
+
+0 0 40px rgba(255,215,0,.45);
+
+transition:.5s;
+
 }
 
 .logo img:hover{
-    transform: scale(1.15) rotateZ(5deg);
-    box-shadow: 0 28px 75px rgba(0,0,0,.3), 0 0 50px rgba(224, 85, 85, 0.25), inset 0 1px 1px rgba(255,255,255,0.9);
+
+transform:scale(1.08) rotate(5deg);
+
 }
 
+.badge{
 
+display:inline-block;
+
+padding:10px 22px;
+
+margin-bottom:20px;
+
+border-radius:30px;
+
+background:rgba(255,255,255,.2);
+
+backdrop-filter:blur(18px);
+
+color:white;
+
+font-weight:700;
+
+letter-spacing:2px;
+
+font-size:14px;
+
+text-transform:uppercase;
+
+border:1px solid rgba(255,255,255,.35);
+
+box-shadow:0 8px 25px rgba(0,0,0,.15);
+
+}
 
 h1{
-    margin-top:20px;
-    font-size:40px;
-    color:var(--primary);
-    font-weight: 900;
-    letter-spacing: -0.6px;
-    text-shadow: 0 6px 20px rgba(0,0,0,.12), 0 2px 4px rgba(0,0,0,0.08);
-    line-height: 1.2;
+
+font-size:clamp(2.2rem,6vw,4rem);
+
+font-weight:900;
+
+color:white;
+
+text-shadow:
+
+0 5px 15px rgba(0,0,0,.3);
+
+margin-bottom:12px;
+
 }
-
-
 
 .subtitle{
-    color:var(--text-light);
-    font-size:16px;
-    font-weight: 500;
-    margin-top: 8px;
+
+font-size:clamp(1rem,3vw,1.2rem);
+
+color:white;
+
+opacity:.95;
+
+max-width:700px;
+
+margin:auto;
+
+line-height:1.8;
+
+font-weight:500;
+
 }
-
-
-
-
-
-
-
 
 .messages{
-    width:96%;
-    max-width:1150px;
-    margin:auto;
-    display:grid;
-    grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
-    gap:28px;
-    animation: fadeIn .6s ease .2s both;
+
+max-width:1100px;
+
+margin:auto;
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+
+gap:30px;
+
 }
-
-@keyframes fadeIn{
-    from{
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to{
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-
 
 .card{
-    background: linear-gradient(135deg, rgba(255,255,255,.85) 0%, rgba(255,255,255,.65) 100%);
-    backdrop-filter: blur(20px) saturate(180%);
-    border-radius: 22px;
-    border: 1px solid rgba(255,255,255,.85);
-    padding:28px;
-    text-align:center;
-    box-shadow: 0 15px 40px rgba(0,0,0,.12), inset 0 1px 0 rgba(255,255,255,.7);
-    transition: all .5s cubic-bezier(0.34, 1.56, 0.64, 1);
-    position: relative;
-    overflow: hidden;
+
+background:rgba(255,255,255,.18);
+
+backdrop-filter:blur(20px);
+
+border:1px solid rgba(255,255,255,.35);
+
+border-radius:28px;
+
+padding:35px;
+
+box-shadow:var(--shadow);
+
+transition:.45s;
+
+position:relative;
+
+overflow:hidden;
+
 }
 
 .card::before{
-    content: '';
-    position: absolute;
-    top: -50%;
-    right: -50%;
-    width: 150px;
-    height: 150px;
-    background: radial-gradient(circle, rgba(255,255,255,.4) 0%, transparent 70%);
-    opacity: 0;
-    transition: all .5s ease;
-}
 
-.card:hover::before{
-    opacity: 1;
-    top: -20%;
-    right: -20%;
-}
+content:"";
 
+position:absolute;
+
+width:180px;
+
+height:180px;
+
+background:rgba(255,255,255,.18);
+
+border-radius:50%;
+
+top:-90px;
+
+right:-90px;
+
+}
 
 .card:hover{
-    transform: translateY(-14px) scale(1.05);
-    background: white;
-    box-shadow: 0 25px 60px rgba(0,0,0,.15), inset 0 1px 0 rgba(255,255,255,.9);
+
+transform:translateY(-12px);
+
+background:rgba(255,255,255,.25);
+
 }
-
-
 
 .avatar{
-    font-size:56px;
-    margin-bottom: 14px;
-    transition: all .4s cubic-bezier(0.34, 1.56, 0.64, 1);
-    display: inline-block;
+
+font-size:70px;
+
+text-align:center;
+
+margin-bottom:18px;
+
+animation:float 4s ease-in-out infinite;
+
 }
 
-.card:hover .avatar{
-    transform: scale(1.3) rotateZ(15deg);
+@keyframes float{
+
+0%,100%{
+
+transform:translateY(0);
+
 }
 
+50%{
 
-h3{
-    color:var(--primary);
-    margin:14px 0 10px;
-    font-size: 22px;
-    font-weight: 800;
-    letter-spacing: -0.2px;
+transform:translateY(-10px);
+
 }
 
+}
 
+.card h2{
+
+text-align:center;
+
+font-size:30px;
+
+color:white;
+
+margin-bottom:10px;
+
+font-weight:800;
+
+}
+
+.card h4{
+
+text-align:center;
+
+font-size:18px;
+
+color:#fff9d7;
+
+margin-bottom:25px;
+
+font-weight:500;
+
+}
 
 button{
-    margin-top:20px;
-    padding:16px 32px;
-    border:none;
-    border-radius: 26px;
-    background: linear-gradient(135deg, #2e7d32 0%, #388e3c 50%, #66bb6a 100%);
-    color:white;
-    font-weight:800;
-    cursor:pointer;
-    transition: all .4s cubic-bezier(0.34, 1.56, 0.64, 1);
-    box-shadow: 0 12px 35px rgba(46, 125, 50, .3), inset 0 1px 1px rgba(255,255,255,0.3);
-    font-size: 16px;
-    letter-spacing: 0.3px;
-    position: relative;
-    overflow: hidden;
-}
 
-button::before{
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0) 100%);
-    transition: left .6s ease;
-    border-radius: 26px;
-}
+width:100%;
 
-button:hover::before{
-    left: 100%;
+padding:18px;
+
+border:none;
+
+border-radius:50px;
+
+cursor:pointer;
+
+font-size:17px;
+
+font-weight:700;
+
+background:linear-gradient(135deg,#FFD700,#F5B301);
+
+color:#333;
+
+transition:.35s;
+
+box-shadow:
+
+0 12px 25px rgba(255,215,0,.35);
+
 }
 
 button:hover{
-    transform: translateY(-6px);
-    box-shadow: 0 18px 45px rgba(46, 125, 50, .4), inset 0 1px 1px rgba(255,255,255,0.4), 0 0 30px rgba(46, 125, 50, 0.15);
-    background: linear-gradient(135deg, #388e3c 0%, #43a047 50%, #7cb342 100%);
+
+transform:translateY(-4px);
+
+box-shadow:
+
+0 18px 35px rgba(255,215,0,.45);
+
 }
-
-button:active{
-    transform: translateY(-2px);
-    box-shadow: 0 8px 20px rgba(46, 125, 50, .2), inset 0 1px 1px rgba(255,255,255,0.3);
-}
-
-
-
 
 .message{
-    display:none;
-    margin-top:18px;
-    padding:18px;
-    background: linear-gradient(135deg, rgba(255,248,181,.8) 0%, rgba(255,248,181,.6) 100%);
-    border-radius: 18px;
-    line-height:1.8;
-    color:var(--text-light);
-    animation: fadeIn .4s ease;
-    border: 1px solid rgba(255,248,181,.9);
-    font-weight: 500;
-}
 
-@keyframes fadeIn{
-    from{
-        opacity: 0;
-        transform: translateY(10px);
-    }
-    to{
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
+display:none;
 
+margin-top:25px;
 
+padding:25px;
 
+border-radius:20px;
 
+background:rgba(255,255,255,.9);
 
-footer{
-    text-align:center;
-    margin:50px 0 20px;
-    color:var(--primary);
-    font-weight:700;
-    font-size: 18px;
-    text-shadow: 0 2px 8px rgba(0,0,0,.08);
-}
+color:#333;
 
+line-height:2;
 
+font-size:16px;
 
-
-
-.bottom-nav{
-    position:fixed;
-    bottom:20px;
-    left:50%;
-    transform:translateX(-50%);
-    width:92%;
-    max-width:360px;
-    display:flex;
-    justify-content:space-around;
-    padding:16px 14px;
-    background: linear-gradient(135deg, rgba(255,255,255,.95) 0%, rgba(255,255,255,.85) 100%);
-    backdrop-filter: blur(25px) saturate(180%);
-    border-radius:50px;
-    border: 1px solid rgba(255,255,255,.9);
-    box-shadow: 0 15px 50px rgba(0,0,0,.15), inset 0 1px 0 rgba(255,255,255,.8);
-    transition: all .3s ease;
-}
-
-.bottom-nav:hover{
-    box-shadow: 0 20px 60px rgba(0,0,0,.18);
-}
-
-
-
-.bottom-nav a{
-    font-size:26px;
-    text-decoration:none;
-    color:var(--primary);
-    transition: all .3s ease;
-    padding: 8px;
-    border-radius: 12px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-
-
-.bottom-nav a:hover{
-    transform: translateY(-10px) scale(1.2);
-    color:var(--secondary);
-    background: rgba(224, 168, 0, 0.1);
-}
-
-
-
-
-
-@media(max-width:600px){
-
-h1{
-
-font-size:27px;
+animation:fade .5s;
 
 }
 
+@keyframes fade{
+
+from{
+
+opacity:0;
+
+transform:translateY(15px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
+
+/* Mobile */
+
+@media(max-width:768px){
+
+body{
+
+padding:15px 12px 110px;
+
+}
+
+.logo img{
+
+width:120px;
+
+height:120px;
+
+}
 
 .card{
 
-padding:20px;
+padding:22px;
+
+}
+
+.card h2{
+
+font-size:25px;
+
+}
+
+.avatar{
+
+font-size:56px;
+
+}
+
+button{
+
+padding:15px;
+
+font-size:16px;
 
 }
 
 }
-
-
 </style>
-
 
 </head>
 
-
 <body>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 <div class="header">
 
-
 <div class="logo">
-
-<img src="2.png" alt="School Logo">
-
+<img src="2.png" alt="16th Batch Logo">
 </div>
 
-
+<div class="badge">
+Teachers' Day 2026
+</div>
 
 <h1>
-
-💌 Student Messages
-
+💌 Message from the 16th Batch
 </h1>
 
-
 <p class="subtitle">
-
-Beautiful words from students for their teachers
-
+A heartfelt tribute from the students of the <strong>16th Batch</strong> to all our respected teachers. Thank you for your guidance, patience, inspiration, and unwavering support throughout our journey.
 </p>
 
+</div> 
+
+    <div class="messages">
+
+    <div class="card">
+
+        <div class="avatar">
+            🎓
+        </div>
+
+        <h2>16th Batch</h2>
+
+        <h4>
+            A Heartfelt Tribute to Our Respected Teachers
+        </h4>
+
+        <button onclick="showMessage()">
+            💌 Read Our Message
+        </button>
+
+        <div class="message" id="message">
+
+            <p>
+                <strong>Dear Respected Teachers,</strong>
+            </p>
+
+            <br>
+
+            <p>
+                On this special occasion of <strong>Teachers' Day 2026</strong>, we, the students of the <strong>16th Batch</strong>, would like to express our deepest respect, heartfelt gratitude, and sincere appreciation to every teacher who has been a guiding light in our lives.
+            </p>
+
+            <br>
+
+            <p>
+                A teacher is more than someone who teaches lessons from books. A teacher inspires dreams, builds confidence, shapes character, and prepares students for life's greatest challenges. Every word of encouragement, every lesson, every correction, and every moment of patience has played an important role in making us who we are today.
+            </p>
+
+            <br>
+
+            <p>
+                Throughout our journey, you have encouraged us to work harder, believe in ourselves, and never give up even during difficult times. Your dedication, wisdom, kindness, and commitment have left a lasting impact on each one of us.
+            </p>
+
+            <br>
+
+            <p>
+                Behind every achievement we celebrate today lies the guidance of a teacher who believed in us before we believed in ourselves. Your support has helped us grow not only as students but also as responsible individuals prepared to face the future with courage and confidence.
+            </p>
+
+            <br>
+
+            <p>
+                We know that teaching is not simply a profession—it is a lifelong commitment to shaping generations. The countless hours you spend preparing lessons, answering questions, motivating students, and caring for our future often go unnoticed, yet they make an immeasurable difference in our lives.
+            </p>
+
+            <br>
+
+            <p>
+                Although classrooms may one day become memories, the values, discipline, knowledge, and inspiration you have given us will remain with us forever. Those lessons will continue to guide us wherever life takes us.
+            </p>
+
+            <br>
+
+            <p>
+                Today, we celebrate not only your profession but also your compassion, patience, sacrifices, and unwavering belief in every student. We are proud to have learned from teachers who inspire excellence through both their words and actions.
+            </p>
+
+            <br>
+
+            <p>
+                On behalf of every student of the <strong>16th Batch</strong>, thank you for believing in us, encouraging us to dream bigger, helping us discover our strengths, and standing beside us throughout our educational journey.
+            </p>
+
+            <br>
+
+            <p>
+                May your lives always be filled with happiness, good health, peace, success, and the love and respect that you truly deserve. Your dedication will forever remain an inspiration to us.
+            </p>
+
+            <br>
+
+            <h3 style="text-align:center;color:#0d5460;">
+                🌹 Happy Teachers' Day! 🌹
+            </h3>
+
+            <br>
+
+            <p style="text-align:center;font-size:18px;font-weight:700;">
+                With heartfelt respect and endless gratitude,
+            </p>
+
+            <p style="text-align:center;font-size:22px;font-weight:800;color:#e0a800;">
+                ❤️ The Students of the 16th Batch ❤️
+            </p>
+
+        </div>
+
+    </div>
 
 </div>
-
-
-
-
-
-
-<div class="messages">
-
-
-
-<div class="card">
-
-
-<div class="avatar">
-
-👨‍🎓
-
-</div>
-
-
-<h3>
-
-Student 1
-
-</h3>
-
-
-
-<button onclick="show(1)">
-
-Read Message
-
-</button>
-
-
-
-<div class="message" id="m1">
-
-
-Thank you for teaching us with kindness and patience.
-
-You are the light that guides our future.
-
-Happy Teachers Day! 🎓
-
-
-</div>
-
-
-</div>
-
-
-
-
-
-
-<div class="card">
-
-
-<div class="avatar">
-
-👩‍🎓
-
-</div>
-
-
-<h3>
-
-Student 2
-
-</h3>
-
-
-
-<button onclick="show(2)">
-
-Read Message
-
-</button>
-
-
-
-<div class="message" id="m2">
-
-
-Your words inspire us to dream bigger.
-
-Thank you for always believing in us.
-
-We respect you forever ❤️
-
-
-</div>
-
-
-</div>
-
-
-
-
-
-
-
-<div class="card">
-
-
-<div class="avatar">
-
-⭐
-
-</div>
-
-
-<h3>
-
-Student 3
-
-</h3>
-
-
-
-<button onclick="show(3)">
-
-Read Message
-
-</button>
-
-
-
-<div class="message" id="m3">
-
-
-A great teacher creates great memories.
-
-Thank you for making our school journey special.
-
-Happy Teachers Day!
-
-
-</div>
-
-
-</div>
-
-
-
-
-
-
-
-<div class="card">
-
-
-<div class="avatar">
-
-🎓
-
-</div>
-
-
-<h3>
-
-Student 4
-
-</h3>
-
-
-
-<button onclick="show(4)">
-
-Read Message
-
-</button>
-
-
-
-<div class="message" id="m4">
-
-
-Your dedication and love make every lesson special.
-
-Thank you for being an amazing teacher.
-
-
-</div>
-
-
-</div>
-
-
-
-</div>
-
-
-
-
-
+<!-- ========================= -->
+<!-- Footer -->
+<!-- ========================= -->
 
 <footer>
 
+    <div class="footer-box">
 
-✨ With Love From All Students ✨
+        <h2>✨ Happy Teachers' Day 2026 ✨</h2>
 
+        <p>
+            "A teacher takes a hand, opens a mind, and touches a heart."
+        </p>
+
+        <p class="batch">
+            With Love & Respect ❤️<br>
+            <strong>From the Students of the 16th Batch</strong>
+        </p>
+
+    </div>
 
 </footer>
 
 
+<!-- ========================= -->
+<!-- Bottom Navigation -->
+<!-- ========================= -->
+
+<nav class="bottom-nav">
+
+    <a href="index.html" title="Home">
+        🏠
+    </a>
+
+    <a href="teachers.html" title="Teachers">
+        👨‍🏫
+    </a>
+
+    <a href="program.html" title="Program">
+        🎉
+    </a>
+
+    <a href="gallery.html" title="Gallery">
+        📸
+    </a>
+
+    <a href="memories.html" title="Messages">
+        💌
+    </a>
+
+</nav>
 
 
+<style>
 
+/* ========================= */
+/* Footer */
+/* ========================= */
 
-<div class="bottom-nav">
+footer{
 
+    margin-top:80px;
 
-<a href="index.html">🏠</a>
+    text-align:center;
 
+}
 
-<a href="gallery.html">📸</a>
+.footer-box{
 
+    max-width:900px;
 
-<a href="program.html">🎉</a>
+    margin:auto;
 
+    padding:35px;
 
-<a href="memories.html">💌</a>
+    border-radius:28px;
 
+    background:rgba(255,255,255,.18);
 
-<a href="teachers.html">👨‍🏫</a>
+    backdrop-filter:blur(20px);
 
+    border:1px solid rgba(255,255,255,.35);
 
+    box-shadow:0 20px 40px rgba(0,0,0,.15);
 
-</div>
+}
 
+.footer-box h2{
 
+    color:white;
 
+    font-size:32px;
 
+    margin-bottom:15px;
 
+    text-shadow:0 4px 10px rgba(0,0,0,.25);
 
+}
+
+.footer-box p{
+
+    color:white;
+
+    line-height:1.9;
+
+    font-size:17px;
+
+}
+
+.batch{
+
+    margin-top:20px;
+
+    font-size:20px;
+
+    font-weight:700;
+
+    color:#fff8b5;
+
+}
+
+/* ========================= */
+/* Premium Bottom Navigation */
+/* ========================= */
+
+.bottom-nav{
+
+    position:fixed;
+
+    left:50%;
+
+    bottom:18px;
+
+    transform:translateX(-50%);
+
+    width:95%;
+
+    max-width:430px;
+
+    height:72px;
+
+    display:flex;
+
+    justify-content:space-around;
+
+    align-items:center;
+
+    background:rgba(255,255,255,.20);
+
+    backdrop-filter:blur(25px);
+
+    border:1px solid rgba(255,255,255,.35);
+
+    border-radius:40px;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.18);
+
+    z-index:999;
+
+}
+
+.bottom-nav a{
+
+    width:56px;
+
+    height:56px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    border-radius:50%;
+
+    text-decoration:none;
+
+    font-size:28px;
+
+    transition:.35s;
+
+}
+
+.bottom-nav a:hover{
+
+    background:white;
+
+    transform:translateY(-8px) scale(1.12);
+
+    box-shadow:0 10px 25px rgba(0,0,0,.18);
+
+}
+
+/* ========================= */
+/* Mobile Responsive */
+/* ========================= */
+
+@media (max-width:768px){
+
+.messages{
+
+grid-template-columns:1fr;
+
+gap:20px;
+
+}
+
+.footer-box{
+
+padding:25px 18px;
+
+}
+
+.footer-box h2{
+
+font-size:24px;
+
+}
+
+.footer-box p{
+
+font-size:15px;
+
+}
+
+.batch{
+
+font-size:18px;
+
+}
+
+.bottom-nav{
+
+width:96%;
+
+height:68px;
+
+}
+
+.bottom-nav a{
+
+font-size:24px;
+
+width:50px;
+
+height:50px;
+
+}
+
+}
+
+@media (max-width:480px){
+
+.footer-box{
+
+border-radius:22px;
+
+}
+
+.footer-box h2{
+
+font-size:22px;
+
+}
+
+.footer-box p{
+
+font-size:14px;
+
+line-height:1.7;
+
+}
+
+.batch{
+
+font-size:17px;
+
+}
+
+.bottom-nav{
+
+bottom:10px;
+
+height:64px;
+
+}
+
+.bottom-nav a{
+
+font-size:22px;
+
+}
+
+}
+
+</style>
 <script>
 
+// ==============================
+// Show / Hide Message
+// ==============================
 
-function show(id){
+function showMessage(){
+
+    const message = document.getElementById("message");
+    const button = document.querySelector("button");
+
+    if(message.style.display==="block"){
+
+        message.style.display="none";
+        button.innerHTML="💌 Read Our Message";
+
+        return;
+    }
+
+    message.style.display="block";
+    button.innerHTML="❤️ Thank You, Teachers";
+
+    message.scrollIntoView({
+        behavior:"smooth",
+        block:"center"
+    });
+
+    createHearts();
+}
 
 
-let msg=document.getElementById("m"+id);
 
+// ==============================
+// Floating Hearts
+// ==============================
 
+function createHearts(){
 
-if(msg.style.display==="block"){
+    for(let i=0;i<18;i++){
 
+        const heart=document.createElement("div");
 
-msg.style.display="none";
+        heart.innerHTML="❤️";
 
+        heart.style.position="fixed";
+        heart.style.left=Math.random()*100+"vw";
+        heart.style.bottom="-20px";
+        heart.style.fontSize=(18+Math.random()*18)+"px";
+        heart.style.pointerEvents="none";
+        heart.style.zIndex="9999";
+        heart.style.opacity="1";
+        heart.style.transition="all 4s linear";
+
+        document.body.appendChild(heart);
+
+        setTimeout(()=>{
+
+            heart.style.transform=
+            `translateY(-${window.innerHeight+200}px)
+             translateX(${Math.random()*200-100}px)
+             rotate(${Math.random()*360}deg)`;
+
+            heart.style.opacity="0";
+
+        },50);
+
+        setTimeout(()=>{
+
+            heart.remove();
+
+        },4200);
+
+    }
 
 }
 
-else{
 
 
-msg.style.display="block";
+// ==============================
+// Card Animation
+// ==============================
 
+const cards=document.querySelectorAll(".card");
+
+const observer=new IntersectionObserver((entries)=>{
+
+entries.forEach(entry=>{
+
+if(entry.isIntersecting){
+
+entry.target.style.opacity="1";
+entry.target.style.transform="translateY(0)";
 
 }
 
+});
+
+},{
+threshold:0.2
+});
+
+cards.forEach(card=>{
+
+card.style.opacity="0";
+card.style.transform="translateY(60px)";
+card.style.transition=".8s";
+
+observer.observe(card);
+
+});
+
+
+
+// ==============================
+// Logo Animation
+// ==============================
+
+const logo=document.querySelector(".logo img");
+
+setInterval(()=>{
+
+logo.animate([
+
+{transform:"translateY(0px)"},
+
+{transform:"translateY(-8px)"},
+
+{transform:"translateY(0px)"}
+
+],{
+
+duration:2500
+
+});
+
+},2500);
+
+
+
+// ==============================
+// Button Ripple Effect
+// ==============================
+
+document.querySelector("button").addEventListener("click",function(e){
+
+const ripple=document.createElement("span");
+
+const rect=this.getBoundingClientRect();
+
+const size=Math.max(rect.width,rect.height);
+
+ripple.style.width=size+"px";
+ripple.style.height=size+"px";
+
+ripple.style.position="absolute";
+ripple.style.borderRadius="50%";
+ripple.style.background="rgba(255,255,255,.5)";
+ripple.style.left=(e.clientX-rect.left-size/2)+"px";
+ripple.style.top=(e.clientY-rect.top-size/2)+"px";
+ripple.style.transform="scale(0)";
+ripple.style.animation="ripple .6s linear";
+ripple.style.pointerEvents="none";
+
+this.appendChild(ripple);
+
+setTimeout(()=>{
+
+ripple.remove();
+
+},600);
+
+});
+
+
+
+// ==============================
+// Ripple CSS
+// ==============================
+
+const style=document.createElement("style");
+
+style.innerHTML=`
+
+button{
+
+position:relative;
+
+overflow:hidden;
 
 }
 
+@keyframes ripple{
 
+to{
+
+transform:scale(4);
+
+opacity:0;
+
+}
+
+}
+
+`;
+
+document.head.appendChild(style);
+
+
+
+// ==============================
+// Greeting
+// ==============================
+
+console.log("%cHappy Teachers' Day 2026","color:#FFD700;font-size:22px;font-weight:bold;");
+
+console.log("%cWith Love from the 16th Batch ❤️","color:#ffffff;font-size:16px;");
 
 </script>
 
-
-
-
 </body>
-
 </html>
