@@ -68,9 +68,6 @@
         .bottom-nav a { font-size: 28px; text-decoration: none; color: white; transition: .35s; }
         .bottom-nav a.active { background: #FFD700; padding: 10px; border-radius: 50%; color: #12363d; }
 
-        .top-btn, .music-btn { position: fixed; width: 55px; height: 55px; border: none; border-radius: 50%; background: white; font-size: 24px; cursor: pointer; box-shadow: 0 10px 25px rgba(0,0,0,.20); z-index: 999; display: flex; align-items: center; justify-content: center; }
-        .top-btn { left: 20px; bottom: 95px; display: none; }
-        .music-btn { right: 20px; bottom: 95px; }
 
         .reveal { opacity: 0; transform: translateY(40px); transition: all .8s ease; }
         .reveal.active { opacity: 1; transform: translateY(0); }
@@ -183,7 +180,6 @@
     };
     function topPage() { window.scrollTo({ top: 0, behavior: "smooth" }); }
 
-    };
 </script>
 </body>
 </html>
